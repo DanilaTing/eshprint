@@ -1,0 +1,119 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+
+.logo {
+  width: 90px;
+  height: 16px;
+  margin-top: 30px;
+  position: absolute; }
+
+.ked {
+  width: 543px;
+  margin-top: 188px;
+  margin-left: 10px;
+  position: absolute; }
+
+.BUY {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  font-family: "CA MagicHour";
+  font-size: 24px;
+  margin-top: 543px;
+  margin-left: 3px;
+  cursor: pointer;
+  z-index: 200; }
+  .BUY::after {
+    position: absolute;
+    content: "";
+    width: 114%;
+    left: -12%;
+    top: 115%;
+    height: 3px;
+    background-color: black; }
+  .BUY:hover::after {
+    top: 120%; }
+
+a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.social {
+  margin-top: 93vh; }
+
+.insta, .twi {
+  width: auto;
+  /* width: 40px; */
+  margin-left: -20px;
+  position: absolute; }
+
+.twi {
+  left: 27px; }
+
+.insta:hover, .twi:hover {
+  width: 30px; }
+
+.social.buy {
+  margin-top: 88vh; }
+
+.FAQ {
+  position: absolute;
+  font-family: "CA MagicHour";
+  font-size: 24px;
+  margin-top: 93vh;
+  cursor: pointer; }
+
+.soon {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -100 !important;
+  position: absolute; }
+  .soon .text {
+    display: block;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300; }
+  .soon #timer {
+    display: block;
+    font-family: 'CA MagicHour';
+    font-size: 18px;
+    line-height: 38px; }
+  .soon .smile {
+    font-size: 20px;
+    line-height: 50px; }
+
+.gallery {
+  position: absolute;
+  top: 130px;
+  left: 200px; }
+  .gallery #big {
+    width: 450px;
+    height: 297px;
+    background-image: url("../../photos/ked.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+  .gallery .smalls {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; }
+  .gallery #small1, .gallery #small2, .gallery #small3 {
+    width: 112px;
+    height: 125px;
+    background-image: url("../../photos/small-ked.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */
