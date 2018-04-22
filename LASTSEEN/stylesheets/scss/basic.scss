@@ -1,0 +1,179 @@
+body {
+  // background-image: url("../../photos/maket2.png");
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 90px;
+  height: 16px;
+  margin-top: 30px;
+
+  position: absolute;
+}
+
+.ked {
+  width: 543px;
+  margin-top: 188px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.BUY {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  font-family: "CA MagicHour";
+  font-size: 24px;
+  margin-top: 543px;
+  margin-left: 3px;
+
+  cursor: pointer;
+
+  z-index: 200;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 114%;
+    left: -12%;
+    top: 115%;
+    height: 3px;
+    background-color: black;
+  }
+
+  &:hover {
+    &::after {
+      top: 120%;
+    }
+  }
+}
+
+.soon {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  z-index: -100 !important;
+
+  position: absolute;
+
+  .text {
+    display: block;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300;
+  }
+
+  #timer {
+    display: block;
+    font-family: 'CA MagicHour';
+    font-size: 18px;
+    line-height: 38px;
+  }
+
+  .smile {
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
+a {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social {
+  margin-top: 93vh;
+
+  .insta, .twi {
+    width: auto;
+    /* width: 40px; */
+    margin-left: -20px;
+
+    position: absolute;
+  }
+
+  .twi {
+    left: 27px;
+  }
+
+  .insta:hover, .twi:hover {
+    width: 30px;
+  }
+
+  .social.buy {
+    margin-top: 88vh;
+  }
+}
+
+.FAQ {
+  position: absolute;
+  font-family: "CA MagicHour";
+  font-size: 24px;
+  margin-top: 93vh;
+
+  cursor: pointer;
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+  .logo {
+    margin-top: 4.5vh;
+    width: 24vw;
+    height: 2.39vh;
+  }
+
+  .soon {
+
+    .text {
+      display: block;
+      font-family: 'Helvetica Neue';
+      font-size: 5.3vw;
+      line-height: 5.3vw;
+      font-weight: 300;
+    }
+
+    #timer {
+      display: block;
+      font-family: 'CA MagicHour';
+      font-size: 4.8vw;
+      line-height: 10.1vw;
+    }
+
+    .smile {
+      font-size: 5.3vw;
+      line-height: 13.3vw;
+    }
+  }
+
+  .social {
+    width: 19vw;
+    margin-left: 10vw;
+
+    .insta, .twi {
+      width: 7.2vw;
+      height: 7.2vw;
+    }
+
+    .twi {
+      margin-left: 5.7vw;
+    }
+
+    .social.buy {
+      margin-top: 88vh;
+    }
+  }
+}
