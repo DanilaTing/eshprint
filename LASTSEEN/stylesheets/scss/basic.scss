@@ -137,7 +137,9 @@ a {
   }
 
   .soon {
-
+    width: 100vw;
+    height: 100vh;
+    
     .text {
       display: block;
       font-family: 'Helvetica Neue';
@@ -164,6 +166,11 @@ a {
     margin-left: 10vw;
 
     .insta, .twi {
+      width: 7.2vw;
+      height: 7.2vw;
+    }
+
+    .insta:hover, .twi:hover {
       width: 7.2vw;
       height: 7.2vw;
     }
