@@ -98,8 +98,9 @@ a {
     height: 2.39vh; }
 
   .soon {
-    width: 100vw;
-    height: 100vh; }
+    margin-top: 41.2vh;
+    width: 80vw;
+    height: 17.6vh; }
     .soon .text {
       display: block;
       font-family: 'Helvetica Neue';
