@@ -91,7 +91,7 @@ a {
   margin-top: 93vh;
   cursor: pointer; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
+@media screen and (max-device-width: 667px) {
   .logo {
     margin-top: 4.5vh;
     width: 24vw;
@@ -120,11 +120,11 @@ a {
     width: 19vw;
     margin-left: 10vw; }
     .social .insta, .social .twi {
-      width: 7.2vw;
-      height: 7.2vw; }
+      width: 9vw;
+      height: 9vw; }
     .social .insta:hover, .social .twi:hover {
-      width: 7.2vw;
-      height: 7.2vw; }
+      width: 9vw;
+      height: 9vw; }
     .social .twi {
       margin-left: 5.7vw; }
     .social .social.buy {
