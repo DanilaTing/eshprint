@@ -95,6 +95,11 @@ body {
   cursor: pointer; }
 
 @media screen and (max-width: 667px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+
   .soon .text {
     font-size: 5.3vw; }
   .soon #timer {
