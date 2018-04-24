@@ -41,13 +41,7 @@
     top: 120%; }
 
 .soon {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: -100 !important;
+  z-index: -100;
   position: absolute; }
   .soon .text {
     display: block;
