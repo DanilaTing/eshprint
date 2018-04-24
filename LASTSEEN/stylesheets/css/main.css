@@ -1,6 +1,9 @@
 @font-face {
   font-family: "CA MagicHour";
   src: url("../fonts/CAMagicHour.woff"); }
+body {
+  box-sizing: border-box; }
+
 .main {
   width: 100vw;
   height: 100vh;
@@ -41,6 +44,12 @@
     top: 120%; }
 
 .soon {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: -100;
   position: absolute; }
   .soon .text {
@@ -57,6 +66,7 @@
     line-height: 38px; }
 
 .social {
+  position: absolute;
   margin-top: 93vh;
   width: 70px;
   display: flex;
