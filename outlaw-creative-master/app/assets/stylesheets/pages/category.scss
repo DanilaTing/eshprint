@@ -1,0 +1,27 @@
+.itemsList {
+
+  margin-top: 180px;
+  padding-left: 255px;
+
+  .caseContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    font-family: PlumbCondensed-Bold;
+    font-size: 50px;
+    letter-spacing: 0.03px;
+    line-height: 65px;
+
+    cursor: pointer;
+    transition: .15s ease-in-out;
+
+    margin-bottom: 24px;
+    margin-left: 85px;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

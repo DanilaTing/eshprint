@@ -1,0 +1,64 @@
+<h1>Editing Post</h1>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').css('background-color', 'white');
+    $('body').css('color', 'black');
+    $('.logo').css('background-color', 'black');
+    $('.menubar a').css('color', 'black');
+  })
+</script>
+
+<section style="margin-top: 200px;">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= select("post", "rubric_id", Rubric.all.collect {|rubric| [ rubric.title, rubric.id ] }, {include_blank: 'Выберите категорию'}) %>
+
+
+    <div class="field">
+      <%= form.label :client %>
+      <%= form.text_field :client, id: :post_client %>
+    </div>
+
+    <div class="field">
+      <%= form.label :year %>
+      <%= form.text_field :year, id: :post_year %>
+    </div>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :post_title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, id: :post_description %>
+    </div>
+
+    <div id="alreadyThere"><%= render 'items/post_items' %></div>
+
+    <div id="added_item"></div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+  <div id="item_new" style="text-align: center;">
+    <%= link_to 'Добавить 📹', new_post_item_path(@post), remote: true %>
+  </div>
+  </section>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>

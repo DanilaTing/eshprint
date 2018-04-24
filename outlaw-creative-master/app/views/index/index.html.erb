@@ -1,0 +1,14 @@
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.mainContainer').onepage_scroll(function() {
+    sectionContainer: ".scroll_item"
+  })
+})
+</script>
+
+<div class="mainContainer">
+  <% @posts.each do |post| %>
+    <%= render 'posts/asCase', post: post %>
+  <% end %>
+  <%= render 'index/eventsPromo' %>
+</section>

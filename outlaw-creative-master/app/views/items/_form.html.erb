@@ -1,0 +1,43 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= form.file_field :image %>
+
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_field :caption, id: :item_caption %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order %>
+    <%= form.text_field :order, id: :item_order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :item_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type, id: :item_type %>
+  </div>
+
+  <%= select_tag(:option, options_for_select([["Image",1],["Video",2]], params[:option] ), class:"select") %>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

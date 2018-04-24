@@ -1,0 +1,6 @@
+<% if @newPost == false %>
+  $('#item_new').html("<%= j render 'items/new_link' %>")
+<% else %>
+  $('#item_new_new').html("<%= j render 'items/newInNew_link' %>")
+<% end %>
+  $('#added_item').after("<%= j render 'items/added_item', item: @item %>")

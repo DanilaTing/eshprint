@@ -1,0 +1,6 @@
+<% @post.items.reverse_each do |item| %>
+  <div id="clearedItem<%= item.id %>">
+  <%= item.title %> <br>
+  <%= link_to '—', [@post, item], method: :delete, :data => {:confirm => 'Are you sure?'}, class: 'removeColArt', id: 'deleteLink', remote: true %> <br>
+  </div>
+<% end %>

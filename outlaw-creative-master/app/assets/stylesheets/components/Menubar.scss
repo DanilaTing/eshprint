@@ -1,0 +1,44 @@
+.menubar {
+  width: calc(100% - 190px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed !important;
+
+  padding: 0 95px;
+  top: 45px !important;
+
+  z-index: 50;
+
+  .logo {
+    width: 118px;
+    height: 29px;
+
+    background-color: white;
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    -webkit-mask-image: image_url('logo.svg');
+    mask-image: image_url('logo.svg');
+  }
+
+  .rubricsContainer {
+    align-self: flex-end;
+
+    a {
+      color: white;
+      margin-right: 10px;
+      text-decoration: none;
+      transition: .15s;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
