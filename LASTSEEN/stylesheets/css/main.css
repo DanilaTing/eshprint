@@ -64,23 +64,24 @@
     font-size: 20px;
     line-height: 50px; }
 
-a {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 .social {
-  margin-top: 93vh; }
+  margin-top: 93vh;
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
   .social .insta, .social .twi {
-    width: auto;
-    /* width: 40px; */
-    margin-left: -20px;
-    position: absolute; }
-  .social .twi {
-    left: 27px; }
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat; }
   .social .insta:hover, .social .twi:hover {
-    width: 30px; }
+    width: 32px;
+    height: 32px; }
+  .social .insta {
+    background-image: url("../../photos/insta.svg"); }
+  .social .twi {
+    background-image: url("../../photos/twi.svg"); }
   .social .social.buy {
     margin-top: 88vh; }
 
@@ -91,44 +92,23 @@ a {
   margin-top: 93vh;
   cursor: pointer; }
 
-@media screen and (max-device-width: 667px) {
-  .logo {
-    margin-top: 4.5vh;
-    width: 24vw;
-    height: 2.39vh; }
-
-  .soon {
-    margin-top: 41.2vh;
-    width: 80vw;
-    height: 17.6vh; }
-    .soon .text {
-      display: block;
-      font-family: 'Helvetica Neue';
-      font-size: 5.3vw;
-      line-height: 5.3vw;
-      font-weight: 300; }
-    .soon #timer {
-      display: block;
-      font-family: 'CA MagicHour';
-      font-size: 4.8vw;
-      line-height: 10.1vw; }
-    .soon .smile {
-      font-size: 5.3vw;
-      line-height: 13.3vw; }
+@media screen and (max-width: 667px) {
+  .soon .text {
+    font-size: 25px; }
+  .soon #timer {
+    font-size: 25px; }
+  .soon .smile {
+    font-size: 25px; }
 
   .social {
-    width: 19vw;
-    margin-left: 10vw; }
+    margin-top: 90vh;
+    width: 100px; }
     .social .insta, .social .twi {
-      width: 9vw;
-      height: 9vw; }
+      width: 40px;
+      height: 40px; }
     .social .insta:hover, .social .twi:hover {
-      width: 9vw;
-      height: 9vw; }
-    .social .twi {
-      margin-left: 5.7vw; }
-    .social .social.buy {
-      margin-top: 88vh; } }
+      width: 40px;
+      height: 40px; } }
 .gallery {
   position: absolute;
   top: 130px;
