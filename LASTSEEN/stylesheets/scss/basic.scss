@@ -76,23 +76,13 @@ body {
   }
 
   #timer {
+    margin-top: 20px;
     display: block;
     font-family: 'CA MagicHour';
-    font-size: 18px;
+    font-size: 28px;
     line-height: 38px;
   }
-
-  .smile {
-    font-size: 20px;
-    line-height: 50px;
-  }
 }
-
-// a {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
 
 .social {
   margin-top: 93vh;
@@ -138,14 +128,10 @@ body {
 @media screen and (max-width : 667px) {
   .soon {
     .text {
-      font-size: 25px;
+      font-size: 20px;
     }
 
     #timer {
-      font-size: 25px;
-    }
-
-    .smile {
       font-size: 25px;
     }
   }

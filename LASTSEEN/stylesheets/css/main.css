@@ -56,13 +56,11 @@
     line-height: 20px;
     font-weight: 300; }
   .soon #timer {
+    margin-top: 20px;
     display: block;
     font-family: 'CA MagicHour';
-    font-size: 18px;
+    font-size: 28px;
     line-height: 38px; }
-  .soon .smile {
-    font-size: 20px;
-    line-height: 50px; }
 
 .social {
   margin-top: 93vh;
@@ -94,10 +92,8 @@
 
 @media screen and (max-width: 667px) {
   .soon .text {
-    font-size: 25px; }
+    font-size: 20px; }
   .soon #timer {
-    font-size: 25px; }
-  .soon .smile {
     font-size: 25px; }
 
   .social {
