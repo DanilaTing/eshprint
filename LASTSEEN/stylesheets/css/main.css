@@ -3,16 +3,88 @@
   src: url("../fonts/CAMagicHour.woff"); }
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 100vh; }
+
+.logoWraper {
+  width: 100vw;
+  height: auto;
   display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .logoWraper .logo {
+    width: 90px;
+    height: 16px;
+    margin-top: 30px; }
+
+.soon {
+  width: 100vw;
+  margin-top: 40vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .soon .text {
+    display: block;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300; }
+  .soon .timerWraper {
+    width: 330px;
+    margin-top: 20px; }
+    .soon .timerWraper #timer {
+      margin-left: 3.4vw;
+      font-family: 'CA MagicHour';
+      font-size: 28px;
+      line-height: 38px;
+      text-align: left; }
+
+.socialWraper {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
   justify-content: center; }
 
-.logo {
-  width: 90px;
-  height: 16px;
-  margin-top: 30px;
-  position: absolute; }
+.social {
+  width: 5%;
+  margin-top: 35vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .social .insta, .social .twi {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .social .insta:hover, .social .twi:hover {
+    width: 32px;
+    height: 32px; }
+  .social .insta {
+    background-image: url("../../photos/insta.svg"); }
+  .social .twi {
+    background-image: url("../../photos/twi.svg"); }
 
+@media screen and (max-width: 667px) {
+  .soon {
+    margin-top: 30vh; }
+    .soon .text {
+      font-size: 5.3vw; }
+    .soon .timerWraper {
+      width: 100vw; }
+      .soon .timerWraper #timer {
+        margin-left: 23vw;
+        font-size: 6.6vw; }
+
+  .social {
+    margin-top: 25vh;
+    width: 100px; }
+    .social .insta, .social .twi {
+      width: 40px;
+      height: 40px; }
+    .social .insta:hover, .social .twi:hover {
+      width: 40px;
+      height: 40px; } }
 .ked {
   width: 543px;
   margin-top: 188px;
@@ -40,53 +112,6 @@
   .BUY:hover::after {
     top: 120%; }
 
-.soon {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: -100;
-  position: absolute; }
-  .soon .text {
-    display: block;
-    font-family: 'Helvetica Neue';
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 300; }
-  .soon .timerWraper {
-    width: 330px;
-    margin-top: 20px; }
-    .soon .timerWraper #timer {
-      margin-left: 3.4vw;
-      font-family: 'CA MagicHour';
-      font-size: 28px;
-      line-height: 38px;
-      text-align: left; }
-
-.social {
-  position: absolute;
-  margin-top: 93vh;
-  width: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .social .insta, .social .twi {
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    background-repeat: no-repeat; }
-  .social .insta:hover, .social .twi:hover {
-    width: 32px;
-    height: 32px; }
-  .social .insta {
-    background-image: url("../../photos/insta.svg"); }
-  .social .twi {
-    background-image: url("../../photos/twi.svg"); }
-  .social .social.buy {
-    margin-top: 88vh; }
-
 .FAQ {
   position: absolute;
   font-family: "CA MagicHour";
@@ -94,42 +119,9 @@
   margin-top: 93vh;
   cursor: pointer; }
 
-@media screen and (max-width: 667px) {
-  body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; }
+.social.buy {
+  margin-top: 88vh; }
 
-  .soon .text {
-    font-size: 5.3vw; }
-  .soon .timerWraper {
-    width: 100vw; }
-    .soon .timerWraper #timer {
-      margin-left: 23vw;
-      font-size: 6.6vw; }
-
-  .social {
-    margin-top: 90vh;
-    width: 100px; }
-    .social .insta, .social .twi {
-      width: 40px;
-      height: 40px; }
-    .social .insta:hover, .social .twi:hover {
-      width: 40px;
-      height: 40px; } }
-@media screen and (device-width: 320px) {
-  body {
-    width: 320px;
-    overflow: hidden; }
-
-  .soon {
-    width: 320px;
-    margin-left: 0;
-    position: absolute; }
-    .soon .timerWraper {
-      width: 320px; }
-      .soon .timerWraper #timer {
-        font-size: 6.6vw; } }
 .gallery {
   position: absolute;
   top: 130px;

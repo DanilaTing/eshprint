@@ -1,0 +1,50 @@
+.ked {
+  width: 543px;
+  margin-top: 188px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.BUY {
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  font-family: "CA MagicHour";
+  font-size: 24px;
+  margin-top: 543px;
+  margin-left: 3px;
+
+  cursor: pointer;
+
+  z-index: 200;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 114%;
+    left: -12%;
+    top: 115%;
+    height: 3px;
+    background-color: black;
+  }
+
+  &:hover {
+    &::after {
+      top: 120%;
+    }
+  }
+}
+
+.FAQ {
+  position: absolute;
+  font-family: "CA MagicHour";
+  font-size: 24px;
+  margin-top: 93vh;
+
+  cursor: pointer;
+}
+
+
+.social.buy {
+  margin-top: 88vh;
+}
