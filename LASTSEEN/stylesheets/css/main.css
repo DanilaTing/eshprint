@@ -1,9 +1,6 @@
 @font-face {
   font-family: "CA MagicHour";
   src: url("../fonts/CAMagicHour.woff"); }
-body {
-  box-sizing: border-box; }
-
 .main {
   width: 100vw;
   height: 100vh;
@@ -58,12 +55,15 @@ body {
     font-size: 20px;
     line-height: 20px;
     font-weight: 300; }
-  .soon #timer {
-    margin-top: 20px;
-    display: block;
-    font-family: 'CA MagicHour';
-    font-size: 28px;
-    line-height: 38px; }
+  .soon .timerWraper {
+    width: 330px;
+    margin-top: 20px; }
+    .soon .timerWraper #timer {
+      margin-left: 45px;
+      font-family: 'CA MagicHour';
+      font-size: 28px;
+      line-height: 38px;
+      text-align: left; }
 
 .social {
   position: absolute;
@@ -102,8 +102,11 @@ body {
 
   .soon .text {
     font-size: 5.3vw; }
-  .soon #timer {
-    font-size: 6.6vw; }
+  .soon .timerWraper {
+    width: 100vw; }
+    .soon .timerWraper #timer {
+      margin-left: 23vw;
+      font-size: 6.6vw; }
 
   .social {
     margin-top: 90vh;

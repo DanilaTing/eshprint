@@ -1,6 +1,6 @@
 body {
   // background-image: url("../../photos/maket2.png");
-  box-sizing: border-box;
+  // box-sizing: border-box;
 }
 
 .main {
@@ -76,12 +76,17 @@ body {
     font-weight: 300;
   }
 
-  #timer {
+  .timerWraper {
+    width: 330px;
     margin-top: 20px;
-    display: block;
-    font-family: 'CA MagicHour';
-    font-size: 28px;
-    line-height: 38px;
+
+    #timer {
+      margin-left: 45px;
+      font-family: 'CA MagicHour';
+      font-size: 28px;
+      line-height: 38px;
+      text-align: left;
+    }
   }
 }
 
@@ -138,8 +143,12 @@ body {
       font-size: 5.3vw;
     }
 
-    #timer {
-      font-size: 6.6vw;
+    .timerWraper {
+      width: 100vw;
+      #timer {
+        margin-left: 23vw;
+        font-size: 6.6vw;
+      }
     }
   }
 
