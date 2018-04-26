@@ -81,7 +81,7 @@ body {
     margin-top: 20px;
 
     #timer {
-      margin-left: 45px;
+      margin-left: 3.4vw;
       font-family: 'CA MagicHour';
       font-size: 28px;
       line-height: 38px;
@@ -138,6 +138,7 @@ body {
     height: 100vh;
     overflow: hidden;
   }
+
   .soon {
     .text {
       font-size: 5.3vw;
@@ -145,6 +146,7 @@ body {
 
     .timerWraper {
       width: 100vw;
+
       #timer {
         margin-left: 23vw;
         font-size: 6.6vw;
@@ -164,6 +166,28 @@ body {
     .insta:hover, .twi:hover {
       width: 40px;
       height: 40px;
+    }
+  }
+}
+
+@media screen and (device-width: 320px) {
+  body {
+    width: 320px;
+    overflow: hidden;
+  }
+
+  .soon {
+    width: 320px;
+    margin-left: 0;
+    position: absolute;
+
+    .timerWraper {
+      width: 320px;
+
+      #timer {
+        // margin-left: 23vw;
+        font-size: 6.6vw;
+      }
     }
   }
 }

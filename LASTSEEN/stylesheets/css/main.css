@@ -59,7 +59,7 @@
     width: 330px;
     margin-top: 20px; }
     .soon .timerWraper #timer {
-      margin-left: 45px;
+      margin-left: 3.4vw;
       font-family: 'CA MagicHour';
       font-size: 28px;
       line-height: 38px;
@@ -117,6 +117,19 @@
     .social .insta:hover, .social .twi:hover {
       width: 40px;
       height: 40px; } }
+@media screen and (device-width: 320px) {
+  body {
+    width: 320px;
+    overflow: hidden; }
+
+  .soon {
+    width: 320px;
+    margin-left: 0;
+    position: absolute; }
+    .soon .timerWraper {
+      width: 320px; }
+      .soon .timerWraper #timer {
+        font-size: 6.6vw; } }
 .gallery {
   position: absolute;
   top: 130px;
