@@ -31,10 +31,13 @@
     line-height: 20px;
     font-weight: 300; }
   .soon .timerWraper {
-    width: 330px;
-    margin-top: 20px; }
+    width: 100vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
     .soon .timerWraper #timer {
-      margin-left: 3.4vw;
       font-family: 'CA MagicHour';
       font-size: 28px;
       line-height: 38px;
@@ -53,13 +56,13 @@
   flex-direction: row;
   justify-content: space-between; }
   .social .insta, .social .twi {
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    height: 2vw;
     background-size: contain;
     background-repeat: no-repeat; }
   .social .insta:hover, .social .twi:hover {
-    width: 32px;
-    height: 32px; }
+    width: 2.2vw;
+    height: 2.2vw; }
   .social .insta {
     background-image: url("../../photos/insta.svg"); }
   .social .twi {
@@ -73,18 +76,29 @@
     .soon .timerWraper {
       width: 100vw; }
       .soon .timerWraper #timer {
-        margin-left: 23vw;
         font-size: 6.6vw; }
 
   .social {
-    margin-top: 25vh;
-    width: 100px; }
+    width: 100px;
+    margin-top: 25vh; }
     .social .insta, .social .twi {
-      width: 40px;
-      height: 40px; }
+      width: 10.6vw;
+      height: 10.6vw; }
     .social .insta:hover, .social .twi:hover {
-      width: 40px;
-      height: 40px; } }
+      width: 20.6vw;
+      height: 20.6vw; } }
+@media screen and (min-device-width: 667px) and (max-device-width: 1366px) {
+  .social {
+    margin-top: 35vh;
+    width: 15%; }
+    .social .insta, .social .twi {
+      width: 10.6vw;
+      height: 10.6vw; }
+    .social .twi {
+      margin-left: 20px; }
+    .social .insta:hover, .social .twi:hover {
+      width: 10.6vw;
+      height: 10.6vw; } }
 .ked {
   width: 543px;
   margin-top: 188px;
