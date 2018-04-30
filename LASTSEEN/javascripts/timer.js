@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("May 20, 2018 00:00:00").getTime();
+var countDownDate = new Date("May 25, 2018 19:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -43,6 +43,6 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     $(".soon").css('display', 'none')
-    $(".soon").after("<img src='photos/ked.png' alt='' class='ked'> <a href='buy.html' class='BUY'>BUY</a>");
+    $(".soon").after("<div class='buyWrapper'> <div class='kedBuy'> <figure class='ked'></figure> <a href='buy.html' class='BUY'>BUY</a> </div> </div>");
   }
 }, 1000);

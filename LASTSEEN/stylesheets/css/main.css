@@ -41,28 +41,31 @@
       font-family: 'CA MagicHour';
       font-size: 28px;
       line-height: 38px;
-      text-align: left; }
+      text-align: left;
+      width: 260px; }
 
 .socialWraper {
   width: 100vw;
   display: flex;
-  flex-direction: row;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 30px; }
 
 .social {
-  width: 5%;
-  margin-top: 35vh;
+  width: 72px;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
   .social .insta, .social .twi {
-    width: 2vw;
-    height: 2vw;
+    width: 30px;
+    height: 30px;
     background-size: contain;
     background-repeat: no-repeat; }
   .social .insta:hover, .social .twi:hover {
-    width: 2.2vw;
-    height: 2.2vw; }
+    width: 31px;
+    height: 31px; }
   .social .insta {
     background-image: url("../../photos/insta.svg"); }
   .social .twi {
@@ -78,9 +81,11 @@
       .soon .timerWraper #timer {
         font-size: 6.6vw; }
 
-  .social {
-    width: 100px;
+  .socialWraper {
     margin-top: 25vh; }
+
+  .social {
+    width: 100px; }
     .social .insta, .social .twi {
       width: 10.6vw;
       height: 10.6vw; }
@@ -88,8 +93,13 @@
       width: 20.6vw;
       height: 20.6vw; } }
 @media screen and (min-device-width: 667px) and (max-device-width: 1366px) {
+  #timer {
+    width: 500px; }
+
+  .socialWraper {
+    margin-top: 35vh; }
+
   .social {
-    margin-top: 35vh;
     width: 15%; }
     .social .insta, .social .twi {
       width: 10.6vw;
@@ -99,47 +109,65 @@
     .social .insta:hover, .social .twi:hover {
       width: 10.6vw;
       height: 10.6vw; } }
+.buyWrapper {
+  margin-top: 22.7vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.kedBuy {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .ked {
   width: 543px;
-  margin-top: 188px;
-  margin-left: 10px;
-  position: absolute; }
+  height: 360px;
+  background-image: url("../../photos/ked.png");
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .BUY {
   color: black;
   text-decoration: none;
-  position: absolute;
   font-family: "CA MagicHour";
   font-size: 24px;
-  margin-top: 543px;
-  margin-left: 3px;
   cursor: pointer;
   z-index: 200; }
   .BUY::after {
-    position: absolute;
-    content: "";
+    content: '';
     width: 114%;
+    height: 3px;
     left: -12%;
     top: 115%;
-    height: 3px;
     background-color: black; }
   .BUY:hover::after {
     top: 120%; }
 
+@media screen and (max-width: 667px) {
+  .ked {
+    width: 77.7vw;
+    height: 52vw; } }
+@media screen and (min-device-width: 667px) and (max-device-width: 1366px) {
+  .ked {
+    width: 77.7vw;
+    height: 52vw; } }
 .FAQ {
-  position: absolute;
   font-family: "CA MagicHour";
   font-size: 24px;
-  margin-top: 93vh;
+  padding-bottom: 20px;
   cursor: pointer; }
 
-.social.buy {
-  margin-top: 88vh; }
+.socialWraper.buy {
+  margin-top: 15vh; }
+
+.galButton {
+  display: flex; }
 
 .gallery {
-  position: absolute;
-  top: 130px;
-  left: 200px; }
+  margin-top: 12vh;
+  margin-left: 13.8vw; }
   .gallery #big {
     width: 450px;
     height: 297px;
@@ -150,14 +178,49 @@
   .gallery .smalls {
     width: 450px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 30px; }
-  .gallery #small1, .gallery #small2, .gallery #small3 {
+  .gallery #small1, .gallery #small2, .gallery #small3, .gallery #small4 {
     width: 112px;
     height: 125px;
-    background-image: url("../../photos/small-ked.png");
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer; }
+  .gallery #small1 {
+    background-image: url("../../photos/ked.png"); }
+  .gallery #small2 {
+    background-image: url("../../photos/small-ked.png"); }
+  .gallery #small3 {
+    background-image: url("../../photos/small-ked.png"); }
+  .gallery #small4 {
+    background-image: url("../../photos/small-ked.png"); }
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+  margin-left: 250px; }
+  .buttonWrapper .button {
+    background-color: black;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .buttonWrapper .button:hover {
+      transform: scale(1.02);
+      transition: .1s ease-in-out; }
+    .buttonWrapper .button p {
+      color: white;
+      font-family: "CA MagicHour";
+      font-size: 24px; }
+  .buttonWrapper .description {
+    width: 400px;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    margin-top: 30px; }
 
 /*# sourceMappingURL=main.css.map */

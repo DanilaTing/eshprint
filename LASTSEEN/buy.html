@@ -11,29 +11,202 @@
   </head>
   <body>
     <div class="main">
-      <a href="index.html" class="logo">
-        <img src="photos/logo.svg" alt="">
-      </a>
+      <div class="logoWraper">
+        <a href="index.html" class="logo">
+          <img src="photos/logo.svg" alt="">
+        </a>
+      </div>
 
-      <div class="gallery">
-        <div id="big"></div>
-        <div class="smalls">
-          <div id="small1"></div>
-          <div id="small2"></div>
-          <div id="small3"></div>
+      <!-- <section class="galButton">
+        <div class="gallery">
+          <div id="big"></div>
+          <div class="smalls">
+            <div id="small1"></div>
+            <div id="small2"></div>
+            <div id="small3"></div>
+            <div id="small4"></div>
+          </div>
+        </div>
+
+        <div class="buttonWrapper">
+          <div class="button">
+            <p>Order</p>
+          </div>
+          <div class="description">
+            <p>Shipping via Russian Post courier. 1-5 days. <br>Worldwide. Free shipping.</p>
+          </div>
+        </div>
+      </section> -->
+
+      <div id='product-component-27ddf961b1a'></div>
+      <script type="text/javascript">
+      /*<![CDATA[*/
+
+        (function () {
+          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+          if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+              ShopifyBuyInit();
+            } else {
+              loadScript();
+            }
+          } else {
+            loadScript();
+          }
+
+          function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+            script.onload = ShopifyBuyInit;
+          }
+
+          function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+              domain: 'last-seen.myshopify.com',
+              apiKey: '8406db20a3775f1ebb57c3d88c5665da',
+              appId: '6',
+            });
+
+            ShopifyBuy.UI.onReady(client).then(function (ui) {
+              ui.createComponent('product', {
+                id: [857388711980],
+                node: document.getElementById('product-component-27ddf961b1a'),
+                moneyFormat: '%D1%80%D1%83%D0%B1%7B%7Bamount_with_comma_separator%7D%7D',
+                options: {
+          "product": {
+            "buttonDestination": "checkout",
+            "layout": "horizontal",
+            "variantId": "all",
+            "width": "100%",
+            "contents": {
+              "img": false,
+              "imgWithCarousel": true,
+              "variantTitle": false,
+              "description": true,
+              "buttonWithQuantity": false,
+              "quantity": false
+            },
+            "text": {
+              "button": "BUY NOW"
+            },
+            "styles": {
+              "product": {
+                "text-align": "left",
+                "@media (min-width: 601px)": {
+                  "max-width": "100%",
+                  "margin-left": "0",
+                  "margin-bottom": "50px"
+                }
+              },
+              "button": {
+                "background-color": "#000000",
+                ":hover": {
+                  "background-color": "#000000"
+                },
+                "border-radius": "0px",
+                ":focus": {
+                  "background-color": "#000000"
+                }
+              },
+              "title": {
+                "font-size": "26px"
+              },
+              "price": {
+                "font-size": "18px"
+              },
+              "compareAt": {
+                "font-size": "15px"
+              }
+            }
+          },
+          "cart": {
+            "contents": {
+              "button": true
+            },
+            "styles": {
+              "button": {
+                "background-color": "#000000",
+                ":hover": {
+                  "background-color": "#000000"
+                },
+                "border-radius": "0px",
+                ":focus": {
+                  "background-color": "#000000"
+                }
+              },
+              "footer": {
+                "background-color": "#ffffff"
+              }
+            }
+          },
+          "modalProduct": {
+            "contents": {
+              "img": false,
+              "imgWithCarousel": true,
+              "variantTitle": false,
+              "buttonWithQuantity": true,
+              "button": false,
+              "quantity": false
+            },
+            "styles": {
+              "product": {
+                "@media (min-width: 601px)": {
+                  "max-width": "100%",
+                  "margin-left": "0px",
+                  "margin-bottom": "0px"
+                }
+              },
+              "button": {
+                "background-color": "#000000",
+                ":hover": {
+                  "background-color": "#000000"
+                },
+                "border-radius": "0px",
+                ":focus": {
+                  "background-color": "#000000"
+                }
+              }
+            }
+          },
+          "toggle": {
+            "styles": {
+              "toggle": {
+                "background-color": "#000000",
+                ":hover": {
+                  "background-color": "#000000"
+                },
+                ":focus": {
+                  "background-color": "#000000"
+                }
+              }
+            }
+          },
+          "productSet": {
+            "styles": {
+              "products": {
+                "@media (min-width: 601px)": {
+                  "margin-left": "-20px"
+                }
+              }
+            }
+          }
+        }
+              });
+            });
+          }
+        })();
+        /*]]>*/
+      </script>
+
+      <div class="socialWraper buy">
+        <!-- <p class="FAQ">F.A.Q.</p> -->
+        <div class="social">
+          <a target="_blank" href="https://www.instagram.com/stepalastseen/" class="insta"></a>
+          <a target="_blank" href="https://www.twitter.com/stepalastseen/" class="twi"></a>
         </div>
       </div>
-
-      <div class="social buy">
-        <a target="_blank" href="https://www.instagram.com/stepalastseen/">
-          <img src="photos/insta.svg" alt="" class="insta">
-        </a>
-        <a target="_blank" href="https://www.twitter.com/stepalastseen/">
-          <img src="photos/twi.svg" alt="" class="twi">
-        </a>
-      </div>
-
-      <p class="FAQ">F.A.Q.</p>
     </div>
   </body>
 </html>
