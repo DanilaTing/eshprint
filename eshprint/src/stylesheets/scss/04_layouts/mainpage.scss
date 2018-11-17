@@ -1,0 +1,73 @@
+body {
+  overflow: hidden;
+}
+
+.infoPage {
+  background-color: #DFDFDF;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+
+  .toClose {
+    position: absolute;
+    width: 100vw;
+    height: 60px;
+    cursor: s-resize;
+  }
+
+  .logoWrapper {
+    width: 100vw;
+
+    .logo {
+      margin-left: 40px;
+      margin-top: 30px;
+      width: 171px;
+      height: 30px;
+      background-image: url('../../images/eshprint_logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+
+  .mainBlock {
+    width: 100vw;
+    margin-top: 40px;
+
+    p {
+      font-size: 30px;
+      line-height: 40px;
+      color: black;
+      margin-left: 40px;
+      width: 705px;
+
+      &:last-of-type {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .contactsWraper {
+    width: calc(100vw - 80px);
+    margin-top: 277px;
+    margin-left: 40px;
+
+    display: flex;
+
+    a {
+      font-size: 16px;
+      line-height: 18px;
+      color: #7B7B7B;
+      font-weight: 400;
+    }
+
+    .social {
+
+    }
+
+    a.location {
+      width: 256px;
+      margin-left: 40px;
+    }
+  }
+}

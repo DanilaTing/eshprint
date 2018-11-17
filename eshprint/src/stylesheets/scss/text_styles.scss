@@ -1,0 +1,37 @@
+h1 {
+  font-family: 'Aeroport';
+  font-size: 32px;
+  line-height: 20px;
+  font-weight: 600;
+  color: '#000000';
+}
+
+h2 {
+  font-family: 'Aeroport';
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 300;
+  color: '#000000';
+}
+
+p, body {
+  font-family: 'Aeroport';
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 300;
+  color: '#000000';
+}
+
+a {
+  font-family: 'Aeroport';
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #7B7B7B;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: #4A4A4A;
+  }
+}

@@ -1,11 +1,17 @@
 body {
   // background-image: url("../../photos/maket2.png");
-  // box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100vw;
+  margin-top: 0;
+  margin-left: 0;
+  // overflow: hidden;
 }
 
 .main {
+  margin-top: 0;
+  margin-left: 0;
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
 }
 
 .logoWraper {
@@ -15,6 +21,9 @@ body {
   align-items: center;
   flex-direction: column;
 
+  position: fixed;
+  top: 0;
+
   .logo {
     width: 90px;
     height: 16px;
@@ -22,14 +31,27 @@ body {
   }
 }
 
-.soon {
+.soonWraper {
   width: 100vw;
-  margin-top: 40vh;
-  height: auto;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.soon {
+  width: 100vw;
+  height: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   .text {
     display: block;
@@ -41,8 +63,6 @@ body {
 
   .timerWraper {
     width: 100vw;
-    margin-top: 20px;
-    // margin-left: 83vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,19 +84,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // margin-top: 35vh;
-  position: absolute;
+
+  position: fixed;
   bottom: 30px;
 }
 
 .social {
-  width: 72px;
+  width: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
 
-  .insta, .twi {
+  .insta, .twi, .policy {
     width: 30px;
     height: 30px;
     background-size: contain;
@@ -93,25 +113,35 @@ body {
     height: 32px;
   }
 
+  .policy:hover {
+    width: 32px;
+    height: 32px;
+  }
+
   .insta {
     background-image: url("../../photos/insta.svg");
   }
 
   .twi {
-    background-image: url("../../photos/twi.svg");
+    background-image: url("../../photos/vk.svg");
+  }
+
+  .policy {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-image: url("../../photos/policy.svg");
   }
 }
 
 // Mobile
 
 @media screen and (max-width: 667px) {
-
-  #timer {
+  .soonWraper {
+    height: 80vh;
   }
 
   .soon {
-    margin-top: 30vh;
-
     .text {
       font-size: 5.3vw;
     }
@@ -126,18 +156,18 @@ body {
   }
 
   .socialWraper {
-    margin-top: 25vh;
+    bottom: 10px;
   }
 
   .social {
     width: 100px;
 
-    .insta, .twi {
+    .insta, .twi, .policy {
       width: 10.6vw;
       height: 10.6vw;
     }
 
-    .insta:hover, .twi:hover {
+    .insta:hover, .twi:hover, .policy:hover {
       width: 10.6vw;
       height: 10.6vw;
     }
@@ -149,24 +179,24 @@ body {
 @media screen and (min-device-width: 667px) and (max-device-width: 1366px) {
 
   .socialWraper {
-    margin-top: 35vh;
+    margin-top: 0;
   }
 
   .social {
-    width: 15%;
+    width: 140px;
 
-    .insta, .twi {
-      width: 10.6vw;
-      height: 10.6vw;
+    .insta, .twi, .policy {
+      width: 13.6vw;
+      height: 13.6vw;
+    }
+
+    .insta:hover, .twi:hover, .policy:hover {
+      width: 13.6vw;
+      height: 13.6vw;
     }
 
     .twi {
-      margin-left: 20px;
-    }
-
-    .insta:hover, .twi:hover {
-      width: 10.6vw;
-      height: 10.6vw;
+      margin-left: 0px;
     }
   }
 }

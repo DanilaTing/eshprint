@@ -1,102 +1,660 @@
-.FAQ {
-  font-family: "CA MagicHour";
-  font-size: 24px;
-  padding-bottom: 20px;
-
-  cursor: pointer;
-}
-
-.socialWraper.buy {
-  margin-top: 15vh;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .galButton {
   display: flex;
+  margin-top: 6.94vw;
+}
+
+.galleryWrapper#mobile {
+  display: none;
 }
 
 .gallery {
-  // position: absolute;
-  margin-top: 12vh;
-  margin-left: 13.8vw;
 
-  #big {
-    width: 450px;
-    height: 297px;
-    background-image: url('../../photos/ked.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    cursor: pointer;
-  }
-
-  .smalls {
-    width: 450px;
+  &#desktop {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 
-    margin-top: 30px;
+    #big {
+      width: 450px;
+      height: 297px;
+      background-image: url('../../photos/ked_main.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      cursor: pointer;
+    }
+
+    .smalls {
+      // width: 450px;
+      display: flex;
+      justify-content: space-around;
+
+      margin-top: 30px;
+    }
+
+    #small1, #small2, #small3, #small4 {
+      width: 112px;
+      height: 125px;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      cursor: pointer;
+      opacity: .7;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    #small1 {
+      background-image: url('../../photos/ked_main.jpg');
+    }
+    #small2 {
+      background-image: url('../../photos/ked_top.jpg');
+    }
+    #small3 {
+      background-image: url('../../photos/ked_side.jpg');
+    }
+    #small4 {
+      background-image: url('../../photos/ked_back.jpg');
+    }
   }
 
-  #small1, #small2, #small3, #small4 {
-    width: 112px;
-    height: 125px;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    cursor: pointer;
+  &#mobile {
+    display: none;
   }
 
-  #small1 {
-    background-image: url('../../photos/ked.png');
+
+}
+
+.shopifyBuyButtonWraper {
+  margin-left: 10vw;
+  margin-top: 5vh;
+
+  h1 {
+    font-family: "Helvetica Neue";
+    font-weight: 600;
   }
-  #small2 {
-    background-image: url('../../photos/small-ked.png');
+
+  h2 {
+    font-family: "Helvetica Neue";
+    font-weight: 900;
   }
-  #small3 {
-    background-image: url('../../photos/small-ked.png');
+
+  #sneakers {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -15px;
   }
-  #small4 {
-    background-image: url('../../photos/small-ked.png');
+
+  p {
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+    opacity: .5;
+  }
+
+  .infoWrapers {
+    margin-top: 60px;
+    width: 21vw;
+
+    .info {
+      font-family: "Helvetica Neue";
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      transition: 3s ease-in-out;
+    }
+
+    .info:not(:first-of-type) {
+      margin-top: 20px;
+    }
+
+    .plus {
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+
+      div {
+        width: 12px;
+        height: 1.5px;
+        background-color: black;
+        position: absolute;
+
+        &:first-of-type {
+          transform: rotate(90deg);
+          transition: .3s ease-in-out
+        }
+      }
+    }
+
+    .infoMore {
+      display: none;
+      font-family: "Helvetica Neue";
+      font-weight: 400;
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      max-width: 500px;
+      font-size: 15px;
+      line-height: 24px;
+
+      transition: .3s ease-in-out;
+      animation-name: infoMoreShow;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-play-state: paused;
+
+      @keyframes infoMoreShow {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .infoMore#size {
+      background-image: url('../../photos/size_chart.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 20.8vw;
+      height: 22.4vw;
+      margin-bottom: 0;
+    }
   }
 }
 
-.buttonWrapper {
-  display: flex;
-  flex-direction: column;
+.policyWraperBg {
+  display: none;
 
-  margin-top: 250px;
-  margin-left: 250px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: .7;
 
-  .button {
-    background-color: black;
-    width: 200px;
-    height: 60px;
+  top: 0;
+  left: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-duration: .1s;
 
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.02);
-      transition: .1s ease-in-out;
+  @keyframes policyBgShow {
+    0% {
+      opacity: 0;
     }
 
-    p {
-      color: white;
-      font-family: "CA MagicHour";
-      font-size: 24px;
+    100% {
+      opacity: .7;
     }
   }
 
-  .description {
-    width: 400px;
-    font-family: 'Helvetica Neue';
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 300;
+  @keyframes policyBgHide {
+    0% {
+      opacity: .7;
+    }
 
-    margin-top: 30px;
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+.policyWraper {
+  display: none;
+
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+
+  background-color: white;
+
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+  animation-duration: .5s;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  @keyframes policyShow {
+    0% {
+      bottom: -40vh;
+    }
+
+    100% {
+      bottom: 0;
+    }
+  }
+
+  @keyframes policyHide {
+    0% {
+      bottom: 0;
+    }
+
+    100% {
+      bottom: -40vh;
+    }
+  }
+
+  .close {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    background-image: url('../../photos/close.svg');
+
+    position: absolute;
+    top: -60px;
+    right: 0px;
+  }
+
+  .firstWraper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 60px;
+    margin-left: 10%;
+  }
+
+  a {
+    font-family: "Helvetica Neue";
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .contactWraper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 80px;
+    margin-bottom: 40px;
+    margin-left: 5%;
+
+    div {
+      display: flex;
+      align-items: baseline;
+
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  p {
+    font-family: "Helvetica Neue";
+    font-weight: 400;
+    font-size: 20px;
+  }
+}
+
+//1050px
+@media screen and (max-width: 1050px) {
+
+  .logoWraper {
+    position: static;
+  }
+
+  .galButton {
+    flex-direction: column;
+
+    .maxGalleryWraper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .chevron {
+        width: 23px;
+        height: 40px;
+        background-image: url('../../photos/chevron.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .chevron#left {
+        transform: rotate(180deg);
+      }
+    }
+
+    .galleryWrapper#mobile {
+      display: block;
+      width: 50vw;
+      overflow: hidden;
+      margin-left: 0;
+      transition: .5s ease-in-out;
+    }
+
+    .gallery {
+      &#desktop {
+        display: none;
+      }
+
+      &#mobile {
+        display: flex;
+        justify-content: flex-start;
+
+        width: max-content;
+
+        .imgWraper{
+          width: 50vw;
+          height: 30vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .mobImg {
+          min-width: 50vw;
+          min-height: 30vw;
+
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        #mob1 {
+          background-image: url('../../photos/ked_main.jpg');
+        }
+
+        #mob2 {
+          background-image: url('../../photos/ked_top.jpg');
+        }
+
+        #mob3 {
+          background-image: url('../../photos/ked_side.jpg');
+        }
+
+        #mob4 {
+          background-image: url('../../photos/ked_back.jpg');
+        }
+      }
+    }
+
+    .shopifyBuyButtonWraper {
+      margin-left: 10vw;
+
+      h1 {
+        font-size: 35px;
+      }
+
+      .infoMore#size {
+        width: 40.8vw;
+        height: 42.4vw;
+      }
+    }
+  }
+
+  .socialWraper.buy {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    position: static;
+  }
+
+  .policyWraper {
+
+      @keyframes policyHide {
+        0% {
+          bottom: 0;
+        }
+
+        100% {
+          bottom: -45vh;
+        }
+      }
+  }
+}
+
+
+// Mobile
+
+@media screen and (max-width: 667px) {
+
+  .logoWraper#buy {
+    position: static;
+  }
+
+  .galButton {
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .chevrons {
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.5vw;
+    cursor: pointer;
+
+    position: absolute;
+    margin-top: 17vw;
+
+    .chevron {
+      width: 23px;
+      height: 40px;
+      background-image: url('../../photos/chevron.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .chevron#left {
+      transform: rotate(180deg);
+    }
+  }
+
+  .maxGalleryWraper {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+
+  .galleryWrapper#mobile {
+    width: 90vw !important;
+  }
+
+  .gallery {
+    &#mobile {
+      .imgWraper{
+        width: 80vw !important;
+        height: 50vw !important;
+      }
+
+      .mobImg {
+        width: 80vw !important;
+        height: 50vw !important;
+      }
+    }
+  }
+
+  .shopifyBuyButtonWraper {
+    margin-left: 10vw;
+    margin-top: 0;
+    max-width: 80vw;
+    overflow: hidden;
+
+    h1 {
+      font-family: "Helvetica Neue";
+      font-weight: 900;
+
+      font-size: 9.33vw !important;
+    }
+
+    h2 {
+      font-family: "Helvetica Neue";
+      font-weight: 900;
+    }
+
+    #sneakers {
+      font-size: 17px;
+      margin-top: -20px;
+    }
+
+    p {
+      font-family: "Helvetica Neue";
+      font-weight: 500;
+      opacity: .5;
+      font-size: 17px;
+    }
+
+    .infoWrapers {
+      margin-bottom: 40px;
+      max-width: 90vw;
+
+      .info {
+        font-family: "Helvetica Neue";
+        font-weight: 500;
+        font-size: 21px;
+        cursor: pointer;
+        width: 90vw;
+
+        .plus {
+          margin-top: 13px;
+        }
+      }
+
+      .info:not(:first-of-type) {
+        margin-top: 20px;
+      }
+
+      .infoMore {
+        font-size: 17px !important;
+        font-weight: 400;
+        margin-top: 10px !important;
+        margin-bottom: 40px;
+
+        width: 80vw;
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      .infoMore#size {
+        width: 80vw;
+        height: 96vw;
+      }
+    }
+  }
+
+  .socialWraper.buy {
+    position: static;
+    margin-top: 40px;
+  }
+
+  .social {
+    width: 120px;
+  }
+
+  .policyWraper {
+    display: none;
+    transition: 1s ease-in-out;
+
+    position: fixed;
+    width: 100vw;
+    height: max-content;
+    bottom: 0;
+    left: 0;
+
+    background-color: white;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, .1);
+
+    @keyframes policyShow {
+      0% {
+        bottom: -58vh;
+      }
+
+      100% {
+        bottom: 0;
+      }
+    }
+
+    @keyframes policyHide {
+      0% {
+        bottom: 0;
+      }
+
+      100% {
+        bottom: -72vh;
+      }
+    }
+
+    .close {
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+
+      background-image: url('../../photos/close.svg');
+
+      position: absolute;
+      top: -60px;
+      right: 0px;
+    }
+
+    .firstWraper {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin-top: 60px;
+      margin-left: 10%;
+    }
+
+    a {
+      font-family: "Helvetica Neue";
+      font-weight: 900;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+
+    .contactWraper {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin-top: 30px;
+      margin-left: 10%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+
+        a {
+          margin-left: 0;
+        }
+      }
+    }
+
+    p {
+      font-family: "Helvetica Neue";
+      font-weight: 400;
+      font-size: 20px;
+    }
   }
 }

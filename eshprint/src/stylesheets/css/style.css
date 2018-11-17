@@ -1,0 +1,280 @@
+h1 {
+  font-family: 'Aeroport';
+  font-size: 32px;
+  line-height: 20px;
+  font-weight: 600;
+  color: '#000000'; }
+
+h2 {
+  font-family: 'Aeroport';
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 300;
+  color: '#000000'; }
+
+p, body {
+  font-family: 'Aeroport';
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 300;
+  color: '#000000'; }
+
+a {
+  font-family: 'Aeroport';
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #7B7B7B;
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover {
+    color: #4A4A4A; }
+
+body {
+  overflow: hidden; }
+
+.infoPage {
+  background-color: #DFDFDF;
+  width: 100vw;
+  height: 100vh;
+  position: absolute; }
+  .infoPage .toClose {
+    position: absolute;
+    width: 100vw;
+    height: 60px;
+    cursor: s-resize; }
+  .infoPage .logoWrapper {
+    width: 100vw; }
+    .infoPage .logoWrapper .logo {
+      margin-left: 40px;
+      margin-top: 30px;
+      width: 171px;
+      height: 30px;
+      background-image: url("../../images/eshprint_logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer; }
+  .infoPage .mainBlock {
+    width: 100vw;
+    margin-top: 40px; }
+    .infoPage .mainBlock p {
+      font-size: 30px;
+      line-height: 40px;
+      color: black;
+      margin-left: 40px;
+      width: 705px; }
+      .infoPage .mainBlock p:last-of-type {
+        margin-top: 30px; }
+  .infoPage .contactsWraper {
+    width: calc(100vw - 80px);
+    margin-top: 277px;
+    margin-left: 40px;
+    display: flex; }
+    .infoPage .contactsWraper a {
+      font-size: 16px;
+      line-height: 18px;
+      color: #7B7B7B;
+      font-weight: 400; }
+    .infoPage .contactsWraper a.location {
+      width: 256px;
+      margin-left: 40px; }
+
+.calcPage {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 743px;
+  transition: .1s ease-in-out; }
+  .calcPage:hover {
+    margin-top: 740px; }
+  .calcPage#open {
+    margin-top: 50px; }
+
+.blockHead {
+  width: 100vw;
+  height: 60px; }
+  .blockHead#toOpen {
+    cursor: n-resize; }
+  .blockHead#toClose {
+    cursor: s-resize; }
+  .blockHead h1 {
+    padding-top: 16px;
+    margin-left: 40px;
+    font-size: 32px;
+    line-height: 32px; }
+
+.workshopPage {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.3);
+  margin-top: 782px;
+  cursor: pointer;
+  transition: .1s ease-in-out; }
+  .workshopPage:hover {
+    margin-top: 779px; }
+  .workshopPage#open {
+    margin-top: 108px; }
+
+.calculatorWraper {
+  display: flex; }
+
+.presetsWraper {
+  margin-top: 134px;
+  margin-left: 40px;
+  width: calc(100vw - 80px);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .presetsWraper .presets {
+    width: 100%;
+    display: flex; }
+    .presetsWraper .presets .preset {
+      min-width: 256px;
+      cursor: pointer; }
+      .presetsWraper .presets .preset:not(:first-of-type) {
+        margin-left: 158px; }
+      .presetsWraper .presets .preset .presetIcon {
+        width: 256px;
+        height: 220px;
+        background-image: url("../../images/preset_1_icon.svg");
+        background-size: contain;
+        background-repeat: no-repeat; }
+      .presetsWraper .presets .preset .presetName {
+        margin-top: 30px;
+        display: flex; }
+        .presetsWraper .presets .preset .presetName .moreAboutPreset {
+          width: 32px;
+          height: 32px;
+          margin-left: 24px;
+          margin-top: 4px;
+          cursor: help;
+          background-image: url("../../images/cost_icon.svg");
+          background-size: cover; }
+  .presetsWraper .extraProject {
+    width: 532px;
+    font-size: 16px;
+    line-height: 18px; }
+
+.progressBarWraper {
+  width: 946px;
+  margin-left: 40px; }
+  .progressBarWraper .progressStages {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .progressBarWraper .progressStages #inactive {
+      color: #7B7B7B; }
+    .progressBarWraper .progressStages p {
+      cursor: pointer; }
+  .progressBarWraper .progressBar {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    margin-top: 12px; }
+    .progressBarWraper .progressBar .progressBg {
+      width: 100%;
+      height: 4px;
+      background-color: #DEDEDE;
+      position: absolute; }
+    .progressBarWraper .progressBar .progressLine {
+      width: 50%;
+      height: 4px;
+      background-color: black;
+      position: absolute; }
+      .progressBarWraper .progressBar .progressLine#stage0 {
+        width: 12%; }
+      .progressBarWraper .progressBar .progressLine#stage1 {
+        width: 30%; }
+
+.forms {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 946px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.selectButton {
+  box-sizing: border-box;
+  min-width: 256px;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .selectButton.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B; }
+    .selectButton.inactive:hover {
+      color: black;
+      border-color: black; }
+  .selectButton.customInput input {
+    font-size: 17px;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-weight: 400;
+    font-family: 'Aeroport'; }
+    .selectButton.customInput input:focus {
+      outline: none; }
+    .selectButton.customInput input::placeholder {
+      color: #7B7B7B !important; }
+
+.checkoutWraper {
+  width: 256px;
+  height: 642px;
+  position: fixed;
+  top: 110px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .checkoutWraper input {
+    border: none;
+    font-size: 30px;
+    line-height: 34px;
+    color: black;
+    font-weight: 400;
+    font-family: 'Aeroport'; }
+    .checkoutWraper input:focus {
+      outline: none; }
+    .checkoutWraper input::placeholder {
+      color: #7B7B7B; }
+  .checkoutWraper p#cost {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 20px; }
+  .checkoutWraper .checkoutButton {
+    width: 256px;
+    height: 60px;
+    background-color: #7B7B7B;
+    display: flex;
+    justify-content: center;
+    cursor: pointer; }
+    .checkoutWraper .checkoutButton p {
+      color: white;
+      font-size: 20px;
+      line-height: 60px;
+      vertical-align: middle; }
+
+.TextButton {
+  font-size: 20px;
+  position: fixed;
+  left: 926px;
+  top: 711px;
+  cursor: pointer; }
+  .TextButton.inactive {
+    color: grey;
+    cursor: default; }
+
+/*# sourceMappingURL=style.css.map */

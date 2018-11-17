@@ -1,0 +1,58 @@
+.forms {
+  margin-top: 60px;
+  margin-left: 40px;
+
+  width: 946px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selectButton {
+  box-sizing: border-box;
+  min-width: 256px;
+  height: 60px;
+  background-color: black;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B;
+
+    &:hover {
+      color: black;
+      border-color: black;
+    }
+  }
+
+  &.customInput {
+    input {
+      font-size: 17px;
+      text-align: center;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      font-weight: 400;
+      font-family: 'Aeroport';
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #7B7B7B !important;
+      }
+    }
+  }
+}

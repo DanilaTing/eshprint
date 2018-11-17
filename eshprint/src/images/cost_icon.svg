@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>cost_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.4%" y="-0.7%" width="100.8%" height="101.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Calc-Presets-Copy" transform="translate(-188.000000, -481.000000)">
+            <g id="Group-Copy-2" filter="url(#filter-1)" transform="translate(0.000000, 50.000000)">
+                <g id="Group-9" transform="translate(40.000000, 175.000000)">
+                    <g id="Group-11">
+                        <g id="Group-5">
+                            <g id="Group-2">
+                                <g id="cost_icon" transform="translate(152.000000, 260.000000)">
+                                    <circle id="Oval" fill="#000000" cx="10.5" cy="10.5" r="10.5"></circle>
+                                    <path d="M7.456,12.344 L7.456,11.24 L6,11.24 L6,9.896 L7.456,9.896 L7.456,5 L11.504,5 C12.112,5 12.64,5.08266675 13.088,5.248 C13.536,5.41333325 13.9066667,5.63733325 14.2,5.92 C14.4933333,6.20266675 14.7093333,6.53333325 14.848,6.912 C14.9866667,7.29066675 15.056,7.69333325 15.056,8.12 C15.056,8.536 14.9893333,8.93066675 14.856,9.304 C14.7226667,9.67733325 14.5173333,10.0026667 14.24,10.28 C13.9626667,10.5573333 13.6106667,10.784 13.184,10.96 C12.7573333,11.136 12.256,11.2293333 11.68,11.24 L8.896,11.24 L8.896,12.344 L12.992,12.344 L12.992,13.688 L8.896,13.688 L8.896,15.624 L7.456,15.624 L7.456,13.688 L6,13.688 L6,12.344 L7.456,12.344 Z M13.616,8.12 C13.616,7.53333325 13.4266667,7.09066675 13.048,6.792 C12.6693333,6.49333325 12.1546667,6.344 11.504,6.344 L8.896,6.344 L8.896,9.896 L11.504,9.896 C12.1546667,9.896 12.6693333,9.74666675 13.048,9.448 C13.4266667,9.14933325 13.616,8.70666675 13.616,8.12 Z" id="₽" fill="#FFFFFF"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

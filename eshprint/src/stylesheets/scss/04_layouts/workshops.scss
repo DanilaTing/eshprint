@@ -1,0 +1,19 @@
+.workshopPage {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0px 4px 0 rgba(0,0,0,.3);
+
+  margin-top: 782px;
+  cursor: pointer;
+  transition: .1s ease-in-out;
+
+  &:hover {
+    margin-top: 779px;
+  }
+
+  &#open {
+    margin-top: 108px;
+  }
+}

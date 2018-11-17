@@ -1,0 +1,12 @@
+.TextButton {
+  font-size: 20px;
+  position: fixed;
+  left: 926px;
+  top: 711px;
+  cursor: pointer;
+
+  &.inactive {
+    color: grey;
+    cursor: default;
+  }
+}

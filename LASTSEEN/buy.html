@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120530222-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120530222-1');
+    </script>
+
     <meta charset="utf-8">
     <title>LAST SEEN</title>
     <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon">
@@ -12,20 +22,24 @@
 
     <link rel="stylesheet" href="stylesheets/css/style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.touchSwipe.min.js"></script>
     <script type="text/javascript" src="javascripts/gallery.js"></script>
+    <script type="text/javascript" src="javascripts/descriptions.js"></script>
+
+    <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
 
     </script>
   </head>
   <body>
     <div class="main">
-      <div class="logoWraper">
+      <div class="logoWraper" id="buy">
         <a href="index.html" class="logo">
           <img src="photos/logo.svg" alt="">
         </a>
       </div>
 
-      <!-- <section class="galButton">
-        <div class="gallery">
+      <section class="galButton">
+        <div class="gallery" id="desktop">
           <div id="big"></div>
           <div class="smalls">
             <div id="small1"></div>
@@ -35,183 +49,231 @@
           </div>
         </div>
 
-        <div class="buttonWrapper">
-          <div class="button">
-            <p>Order</p>
+        <div class="maxGalleryWraper">
+          <div class="chevron" id="left"></div>
+
+          <div class="galleryWrapper" id="mobile">
+
+            <div class="gallery" id="mobile">
+              <div class="imgWraper">
+                <div class="mobImg" id="mob1"></div>
+              </div>
+              <div class="imgWraper">
+                <div class="mobImg" id="mob2"></div>
+              </div>
+              <div class="imgWraper">
+                <div class="mobImg" id="mob3"></div>
+              </div>
+              <div class="imgWraper">
+                <div class="mobImg" id="mob4"></div>
+              </div>
+            </div>
           </div>
-          <div class="description">
-            <p>Shipping via Russian Post courier. 1-5 days. <br>Worldwide. Free shipping.</p>
-          </div>
+
+          <div class="chevron" id="right"></div>
         </div>
-      </section> -->
 
-      <div id='product-component-27ddf961b1a'></div>
-      <script type="text/javascript">
-      /*<![CDATA[*/
+        <div class="shopifyBuyButtonWraper">
+          <h1>Last Seen Black</h1>
+          <h2 id="sneakers">SNEAKERS</h2>
+          <p>₽7000</p>
 
-        (function () {
-          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-          if (window.ShopifyBuy) {
-            if (window.ShopifyBuy.UI) {
-              ShopifyBuyInit();
+          <!-- BUY BUTTON -->
+          <div id='product-component-41e47b23753' class="shopifyBuyButton"></div>
+          <script type="text/javascript">
+          /*<![CDATA[*/
+
+          (function () {
+            var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+            if (window.ShopifyBuy) {
+              if (window.ShopifyBuy.UI) {
+                ShopifyBuyInit();
+              } else {
+                loadScript();
+              }
             } else {
               loadScript();
             }
-          } else {
-            loadScript();
-          }
 
-          function loadScript() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.src = scriptURL;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-            script.onload = ShopifyBuyInit;
-          }
+            function loadScript() {
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = scriptURL;
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+              script.onload = ShopifyBuyInit;
+            }
 
-          function ShopifyBuyInit() {
-            var client = ShopifyBuy.buildClient({
-              domain: 'last-seen.myshopify.com',
-              apiKey: '8406db20a3775f1ebb57c3d88c5665da',
-              appId: '6',
-            });
-
-            ShopifyBuy.UI.onReady(client).then(function (ui) {
-              ui.createComponent('product', {
-                id: [857388711980],
-                node: document.getElementById('product-component-27ddf961b1a'),
-                moneyFormat: '%D1%80%D1%83%D0%B1%7B%7Bamount_with_comma_separator%7D%7D',
-                options: {
-          "product": {
-            "buttonDestination": "checkout",
-            "layout": "horizontal",
-            "variantId": "all",
-            "width": "100%",
-            "contents": {
-              "img": false,
-              "imgWithCarousel": true,
-              "variantTitle": false,
-              "description": true,
-              "buttonWithQuantity": false,
-              "quantity": false
-            },
-            "text": {
-              "button": "BUY NOW"
-            },
-            "styles": {
-              "product": {
-                "text-align": "left",
-                "@media (min-width: 601px)": {
-                  "max-width": "100%",
-                  "margin-left": "0",
-                  "margin-bottom": "50px"
-                }
-              },
-              "button": {
-                "background-color": "#000000",
-                ":hover": {
-                  "background-color": "#000000"
-                },
-                "border-radius": "0px",
-                ":focus": {
-                  "background-color": "#000000"
-                }
-              },
-              "title": {
-                "font-size": "26px"
-              },
-              "price": {
-                "font-size": "18px"
-              },
-              "compareAt": {
-                "font-size": "15px"
-              }
-            }
-          },
-          "cart": {
-            "contents": {
-              "button": true
-            },
-            "styles": {
-              "button": {
-                "background-color": "#000000",
-                ":hover": {
-                  "background-color": "#000000"
-                },
-                "border-radius": "0px",
-                ":focus": {
-                  "background-color": "#000000"
-                }
-              },
-              "footer": {
-                "background-color": "#ffffff"
-              }
-            }
-          },
-          "modalProduct": {
-            "contents": {
-              "img": false,
-              "imgWithCarousel": true,
-              "variantTitle": false,
-              "buttonWithQuantity": true,
-              "button": false,
-              "quantity": false
-            },
-            "styles": {
-              "product": {
-                "@media (min-width: 601px)": {
-                  "max-width": "100%",
-                  "margin-left": "0px",
-                  "margin-bottom": "0px"
-                }
-              },
-              "button": {
-                "background-color": "#000000",
-                ":hover": {
-                  "background-color": "#000000"
-                },
-                "border-radius": "0px",
-                ":focus": {
-                  "background-color": "#000000"
-                }
-              }
-            }
-          },
-          "toggle": {
-            "styles": {
-              "toggle": {
-                "background-color": "#000000",
-                ":hover": {
-                  "background-color": "#000000"
-                },
-                ":focus": {
-                  "background-color": "#000000"
-                }
-              }
-            }
-          },
-          "productSet": {
-            "styles": {
-              "products": {
-                "@media (min-width: 601px)": {
-                  "margin-left": "-20px"
-                }
-              }
-            }
-          }
-        }
+            function ShopifyBuyInit() {
+              var client = ShopifyBuy.buildClient({
+                domain: 'last-seen.myshopify.com',
+                apiKey: '8406db20a3775f1ebb57c3d88c5665da',
+                appId: '6',
               });
-            });
-          }
-        })();
-        /*]]>*/
-      </script>
+
+              ShopifyBuy.UI.onReady(client).then(function (ui) {
+                ui.createComponent('product', {
+                  id: [857388711980],
+                  node: document.getElementById('product-component-41e47b23753'),
+                  moneyFormat: '%D1%80%D1%83%D0%B1%7B%7Bamount_with_comma_separator%7D%7D',
+                  options: {
+                    "product": {
+                      "variantId": "all",
+                      "width": "240px",
+                      "contents": {
+                        "img": false,
+                        "imgWithCarousel": false,
+                        "title": false,
+                        "variantTitle": false,
+                        "price": false,
+                        "description": false,
+                        "buttonWithQuantity": false,
+                        "quantity": false
+                      },
+                      "styles": {
+                        "product": {
+                          "text-align": "left",
+                          "@media (min-width: 601px)": {
+                            "max-width": "100%",
+                            "margin-left": "0",
+                            "margin-bottom": "50px"
+                          }
+                        },
+                        "button": {
+                          "background-color": "#000000",
+                          ":hover": {
+                            "background-color": "#000000"
+                          },
+                          "border-radius": "0px",
+                          ":focus": {
+                            "background-color": "#000000"
+                          }
+                        },
+                        "title": {
+                          "font-size": "26px"
+                        },
+                        "price": {
+                          "font-size": "18px"
+                        },
+                        "compareAt": {
+                          "font-size": "15px"
+                        }
+                      }
+                    },
+                    "cart": {
+                      "contents": {
+                        "button": true
+                      },
+                      "styles": {
+                        "button": {
+                          "background-color": "#000000",
+                          ":hover": {
+                            "background-color": "#000000"
+                          },
+                          "border-radius": "0px",
+                          ":focus": {
+                            "background-color": "#000000"
+                          }
+                        },
+                        "footer": {
+                          "background-color": "#ffffff"
+                        }
+                      }
+                    },
+                    "modalProduct": {
+                      "contents": {
+                        "img": false,
+                        "imgWithCarousel": true,
+                        "variantTitle": false,
+                        "buttonWithQuantity": true,
+                        "button": false,
+                        "quantity": false
+                      },
+                      "styles": {
+                        "product": {
+                          "@media (min-width: 601px)": {
+                            "max-width": "100%",
+                            "margin-left": "0px",
+                            "margin-bottom": "0px"
+                          }
+                        },
+                        "button": {
+                          "background-color": "#000000",
+                          ":hover": {
+                            "background-color": "#000000"
+                          },
+                          "border-radius": "0px",
+                          ":focus": {
+                            "background-color": "#000000"
+                          }
+                        }
+                      }
+                    },
+                    "toggle": {
+                      "styles": {
+                        "toggle": {
+                          "background-color": "#000000",
+                          ":hover": {
+                            "background-color": "#000000"
+                          },
+                          ":focus": {
+                            "background-color": "#000000"
+                          }
+                        }
+                      }
+                    },
+                    "productSet": {
+                      "styles": {
+                        "products": {
+                          "@media (min-width: 601px)": {
+                            "margin-left": "-20px"
+                          }
+                        }
+                      }
+                    }
+                  }
+                });
+              });
+            }
+          })();
+          /*]]>*/
+          </script>
+          <!-- BUY BUTTON END -->
+
+          <div class="infoWrapers">
+            <div class="info" id="size">Size Chart <div class="plus"><div></div><div></div></div></div>
+            <div class="infoMore" id="size"></div>
+
+            <div class="info" id="materials">Materials <div class="plus"><div></div><div></div></div></div>
+            <div class="infoMore" id="materials">Upper: Suede Leather + Canvas <br>Sole: Vulcanised Rubber</div>
+
+            <div class="info" id="delivery">Delivery Info <div class="plus"><div></div><div></div></div></div>
+            <div class="infoMore" id="delivery">Для заказов по России:<br>Экспресс (1-5 дней с момента отправки) до двери – 0₽<br><br>Worldwide:<br>Express (4-11 days after shipment) door delivery – 1000₽</div>
+          </div>
+        </div>
+      </section>
 
       <div class="socialWraper buy">
-        <!-- <p class="FAQ">F.A.Q.</p> -->
         <div class="social">
           <a target="_blank" href="https://www.instagram.com/stepalastseen/" class="insta"></a>
-          <a target="_blank" href="https://www.twitter.com/stepalastseen/" class="twi"></a>
+          <a class="policy"></a>
+          <a target="_blank" href="https://vk.com/lastseenvk" class="twi"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="policyWraperBg"></div>
+
+    <div class="policyWraper">
+      <figure class="close"></figure>
+      <div class="firstWraper">
+        <a target="_blank" href="policy.html#privacyPolicy">Privacy policy</a>
+        <a target="_blank" href="policy.html#termsOfService">Terms of service</a>
+        <a target="_blank" href="policy.html#overview">Overview</a>
+        <a target="_blank" href="policy.html#refund">Refund policy</a>
+      </div>
+      <div class="contactWraper">
+        <div>
+          <p>For any questions: </p> <a href="mailto:lastseensup@gmail.com">lastseensup@gmail.com</a>
         </div>
       </div>
     </div>

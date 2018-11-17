@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120530222-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120530222-1');
+    </script>
+
     <meta charset="utf-8">
     <title>LAST SEEN</title>
     <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon">
@@ -13,6 +23,7 @@
     <link rel="stylesheet" href="stylesheets/css/style.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/timer.js"></script>
+    <script type="text/javascript" src="javascripts/descriptions.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -21,17 +32,39 @@
         <img src="photos/logo.svg" alt="" class="logo">
       </div>
 
-      <div class="soon">
-        <p class="text">здесь будут ахуенные кроссовки 😎</p>
-        <div class="timerWraper">
-          <p id="timer"></p>
+      <div class="soonWraper">
+        <div class="soon">
+          <p class="text">здесь будут ахуенные кроссовки 😎</p>
+          <div class="timerWraper">
+            <p id="timer"></p>
+          </div>
         </div>
       </div>
+
       <div class="socialWraper">
         <div class="social">
           <a target="_blank" href="https://www.instagram.com/stepalastseen/" class="insta"></a>
-          <a target="_blank" href="https://www.twitter.com/stepalastseen/" class="twi"></a>
+          <a class="policy"></a>
+          <a target="_blank" href="https://vk.com/lastseenvk" class="twi"></a>
         </div>
+      </div>
+    </div>
+
+    <div class="policyWraperBg"></div>
+
+    <div class="policyWraper">
+      <figure class="close"></figure>
+      <div class="firstWraper">
+        <a target="_blank" href="policy.html#privacyPolicy">Privacy policy</a>
+        <a target="_blank" href="policy.html#termsOfService">Terms of service</a>
+        <a target="_blank" href="policy.html#overview">Overview</a>
+        <a target="_blank" href="policy.html#refund">Refund policy</a>
+      </div>
+      <div class="contactWraper">
+        <div>
+          <p>For any questions: </p> <a href="mailto:lastseensup@gmail.com">lastseensup@gmail.com</a>
+        </div>
+
       </div>
     </div>
   </body>
