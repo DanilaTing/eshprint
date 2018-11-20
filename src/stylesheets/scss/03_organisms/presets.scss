@@ -1,23 +1,24 @@
 .presetsWraper {
   margin-top: 134px;
   margin-left: 40px;
-  width: calc(100vw - 80px);
+  width: 94vw;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   .presets {
-    width: 100%;
+    width: 80%;
 
     display: flex;
+    justify-content: space-between;
 
     .preset {
       min-width: 256px;
       cursor: pointer;
 
       &:not(:first-of-type) {
-        margin-left: 158px;
+        // margin-left: 158px;
       }
 
       .presetIcon {
@@ -48,6 +49,8 @@
   }
 
   .extraProject {
+    position: absolute;
+    margin-top: 55vh;
     width: 532px;
 
     font-size: 16px;

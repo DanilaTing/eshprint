@@ -19,7 +19,7 @@ body {
     width: 100vw;
 
     .logo {
-      margin-left: 40px;
+      margin-left: 2.8vw;
       margin-top: 30px;
       width: 171px;
       height: 30px;
@@ -32,13 +32,13 @@ body {
 
   .mainBlock {
     width: 100vw;
-    margin-top: 40px;
+    margin-top: 4.9vh;
 
     p {
       font-size: 30px;
       line-height: 40px;
       color: black;
-      margin-left: 40px;
+      margin-left: 2.8vw;
       width: 705px;
 
       &:last-of-type {
@@ -49,8 +49,8 @@ body {
 
   .contactsWraper {
     width: calc(100vw - 80px);
-    margin-top: 277px;
-    margin-left: 40px;
+    margin-top: 33.7vh;
+    margin-left: 2.8vw;
 
     display: flex;
 
@@ -67,7 +67,7 @@ body {
 
     a.location {
       width: 256px;
-      margin-left: 40px;
+      margin-left: 2.8vw;
     }
   }
 }

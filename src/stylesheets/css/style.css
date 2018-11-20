@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Aeroport';
+  src: local("Aeroport"), url("/fonts/Aeroport-regular.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Aeroport';
+  src: local("Aeroport"), url("/fonts/Aeroport-bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal; }
 h1 {
   font-family: 'Aeroport';
   font-size: 32px;
@@ -46,7 +56,7 @@ body {
   .infoPage .logoWrapper {
     width: 100vw; }
     .infoPage .logoWrapper .logo {
-      margin-left: 40px;
+      margin-left: 2.8vw;
       margin-top: 30px;
       width: 171px;
       height: 30px;
@@ -56,19 +66,19 @@ body {
       cursor: pointer; }
   .infoPage .mainBlock {
     width: 100vw;
-    margin-top: 40px; }
+    margin-top: 4.9vh; }
     .infoPage .mainBlock p {
       font-size: 30px;
       line-height: 40px;
       color: black;
-      margin-left: 40px;
+      margin-left: 2.8vw;
       width: 705px; }
       .infoPage .mainBlock p:last-of-type {
         margin-top: 30px; }
   .infoPage .contactsWraper {
     width: calc(100vw - 80px);
-    margin-top: 277px;
-    margin-left: 40px;
+    margin-top: 33.7vh;
+    margin-left: 2.8vw;
     display: flex; }
     .infoPage .contactsWraper a {
       font-size: 16px;
@@ -77,7 +87,7 @@ body {
       font-weight: 400; }
     .infoPage .contactsWraper a.location {
       width: 256px;
-      margin-left: 40px; }
+      margin-left: 2.8vw; }
 
 .calcPage {
   width: 100vw;
@@ -85,12 +95,12 @@ body {
   position: absolute;
   background-color: white;
   box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.3);
-  margin-top: 743px;
+  margin-top: 90.3vh;
   transition: .1s ease-in-out; }
   .calcPage:hover {
-    margin-top: 740px; }
+    margin-top: 90vh; }
   .calcPage#open {
-    margin-top: 50px; }
+    margin-top: 6vh; }
 
 .blockHead {
   width: 100vw;
@@ -111,13 +121,13 @@ body {
   position: absolute;
   background-color: white;
   box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.3);
-  margin-top: 782px;
+  margin-top: 95.2vh;
   cursor: pointer;
   transition: .1s ease-in-out; }
   .workshopPage:hover {
-    margin-top: 779px; }
+    margin-top: 94.9vh; }
   .workshopPage#open {
-    margin-top: 108px; }
+    margin-top: 13.1vh; }
 
 .calculatorWraper {
   display: flex; }
@@ -125,19 +135,18 @@ body {
 .presetsWraper {
   margin-top: 134px;
   margin-left: 40px;
-  width: calc(100vw - 80px);
+  width: 94vw;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
   .presetsWraper .presets {
-    width: 100%;
-    display: flex; }
+    width: 80%;
+    display: flex;
+    justify-content: space-between; }
     .presetsWraper .presets .preset {
       min-width: 256px;
       cursor: pointer; }
-      .presetsWraper .presets .preset:not(:first-of-type) {
-        margin-left: 158px; }
       .presetsWraper .presets .preset .presetIcon {
         width: 256px;
         height: 220px;
@@ -156,12 +165,14 @@ body {
           background-image: url("../../images/cost_icon.svg");
           background-size: cover; }
   .presetsWraper .extraProject {
+    position: absolute;
+    margin-top: 55vh;
     width: 532px;
     font-size: 16px;
     line-height: 18px; }
 
 .progressBarWraper {
-  width: 946px;
+  width: 65.7vw;
   margin-left: 40px; }
   .progressBarWraper .progressStages {
     width: 100%;
@@ -194,13 +205,13 @@ body {
 .forms {
   margin-top: 60px;
   margin-left: 40px;
-  width: 946px;
+  width: 65.7vw;
   display: flex;
   flex-wrap: wrap; }
 
 .selectButton {
   box-sizing: border-box;
-  min-width: 256px;
+  min-width: 17.8vw;
   height: 60px;
   background-color: black;
   margin-right: 20px;
@@ -232,10 +243,10 @@ body {
 
 .checkoutWraper {
   width: 256px;
-  height: 642px;
+  height: 78vh;
   position: fixed;
-  top: 110px;
-  right: 40px;
+  top: 13.3vh;
+  right: 2.8vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
@@ -270,8 +281,8 @@ body {
 .TextButton {
   font-size: 20px;
   position: fixed;
-  left: 926px;
-  top: 711px;
+  right: 30.7vw;
+  bottom: 10.7vh;
   cursor: pointer; }
   .TextButton.inactive {
     color: grey;
