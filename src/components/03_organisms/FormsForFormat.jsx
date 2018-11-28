@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SelectButton from '../01_atoms/SelectButton';
-import SelectCustom from '../01_atoms/SelectCustom';
+import SelectFormat from '../01_atoms/SelectFormat';
+import SelectFormatCustom from '../01_atoms/SelectFormatCustom';
 
 export default class FormsForFormat extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class FormsForFormat extends Component {
       const { optionName } = option
       if (optionName != 'Свой формат') {
         selects.push (
-          <SelectButton
+          <SelectFormat
             text={ optionName }
             selectedOption={ selectedOption }
             actionSelect={ actionSelect }
@@ -27,7 +27,7 @@ export default class FormsForFormat extends Component {
         )
       } else {
         selects.push (
-          <SelectCustom
+          <SelectFormatCustom
             text={ optionName }
             selectedOption={ selectedOption }
             actionSelect={ actionSelect }
@@ -44,8 +44,12 @@ export default class FormsForFormat extends Component {
 
   render() {
     return (
-      <div className="forms">
+      <div className="FormsForFormat">
         { this.renderSelects() }
+        <div className="noticeWraper">
+          <p className="notice">Максимальный формат нашего ризографа — А3. Хотите напечатать что-то меньше этого формата? Советуем сэкономить и разместить несколько работ на одном листе.</p>
+          <a className="tutorialLink">Подробнее в руководстве к печати</a>
+        </div>
       </div>
     )
   }

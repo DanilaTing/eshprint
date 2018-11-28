@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Aeroport';
-  src: local("Aeroport"), url("/fonts/Aeroport-regular.otf") format("opentype");
+  src: local("AeroportRegular"), url("/fonts/Aeroport-regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'Aeroport';
-  src: local("Aeroport"), url("/fonts/Aeroport-bold.otf") format("opentype");
+  src: local("AeroportBold"), url("/fonts/Aeroport-bold.otf") format("opentype");
   font-weight: 600;
   font-style: normal; }
 h1 {
@@ -202,44 +202,37 @@ body {
       .progressBarWraper .progressBar .progressLine#stage1 {
         width: 30%; }
 
-.forms {
+.FormsForFormat {
   margin-top: 60px;
   margin-left: 40px;
   width: 65.7vw;
   display: flex;
   flex-wrap: wrap; }
+  .FormsForFormat .noticeWraper {
+    max-width: 36.8vw;
+    margin-top: 40px; }
+    .FormsForFormat .noticeWraper .notice {
+      margin-bottom: 24px; }
+    .FormsForFormat .noticeWraper .tutorialLink {
+      margin-top: 50px;
+      font-size: 16px;
+      font-weight: 300; }
 
-.selectButton {
-  box-sizing: border-box;
-  min-width: 17.8vw;
-  height: 60px;
-  background-color: black;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  color: white;
+.FormsForPaper {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 65.7vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer; }
-  .selectButton.inactive {
-    background-color: white;
-    color: #7B7B7B;
-    border: 2px solid #7B7B7B; }
-    .selectButton.inactive:hover {
-      color: black;
-      border-color: black; }
-  .selectButton.customInput input {
-    font-size: 17px;
-    text-align: center;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    font-weight: 400;
-    font-family: 'Aeroport'; }
-    .selectButton.customInput input:focus {
-      outline: none; }
-    .selectButton.customInput input::placeholder {
-      color: #7B7B7B !important; }
+  flex-wrap: wrap;
+  max-height: 63.5vh;
+  overflow: scroll; }
+
+.FormsForCut {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 65.7vw;
+  display: flex;
+  flex-wrap: wrap; }
 
 .checkoutWraper {
   width: 256px;
@@ -278,6 +271,30 @@ body {
       line-height: 60px;
       vertical-align: middle; }
 
+.SelectPaper {
+  box-sizing: border-box;
+  min-width: 27.4vw;
+  height: 60px;
+  background-color: black;
+  background-size: cover;
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectPaper#texture1 {
+    background-image: url("../../images/texture1.jpg"); }
+  .SelectPaper.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B; }
+    .SelectPaper.inactive:hover {
+      color: black;
+      border-color: black; }
+
 .TextButton {
   font-size: 20px;
   position: fixed;
@@ -287,5 +304,94 @@ body {
   .TextButton.inactive {
     color: grey;
     cursor: default; }
+
+.SelectFormat {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectFormat.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B; }
+    .SelectFormat.inactive:hover {
+      color: black;
+      border-color: black; }
+
+.SelectFormatCustom {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectFormatCustom input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 400;
+    font-family: 'Aeroport'; }
+    .SelectFormatCustom input:focus {
+      outline: none; }
+  .SelectFormatCustom.inactive {
+    background-color: white;
+    border: 2px solid #7B7B7B; }
+    .SelectFormatCustom.inactive input {
+      color: #7B7B7B; }
+    .SelectFormatCustom.inactive:hover {
+      border-color: black; }
+      .SelectFormatCustom.inactive:hover input {
+        color: black; }
+
+.SelectPaperCustom {
+  box-sizing: border-box;
+  min-width: 27.4vw;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectPaperCustom.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B; }
+    .SelectPaperCustom.inactive:hover {
+      color: black;
+      border-color: black; }
+
+.PaperColorsSelector.open {
+  width: 100px;
+  height: 100%;
+  background-color: white;
+  border: 2px solid black;
+  position: absolute;
+  right: -120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .PaperColorsSelector.open .colorPicker {
+    width: 24px;
+    height: 24px;
+    border: 2px solid black;
+    border-radius: 100%; }
 
 /*# sourceMappingURL=style.css.map */

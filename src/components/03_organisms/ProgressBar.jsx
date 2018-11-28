@@ -9,26 +9,38 @@ export default class ProgressBar extends Component {
 
   renderStages() {
     const { stages, currentStage, setStageFromProgressBar } = this.props
-
     let stagesToRender = []
+    let filledStages = []
 
     stages.map((stage, i) => {
-      const { stageName } = stage
       const indexOfStage = stages.indexOf(stage)
+      const { stageName } = stage
+
+      if (stage.selectedOption != '') {
+        filledStages.push(
+          indexOfStage
+        )
+      }
+
+      console.log('filledStages= ' + filledStages);
+
+      const lastFilledStage = Math.max.apply(Math, filledStages);
+      const lastIndex = lastFilledStage + 1
+      console.log('lastFilledStage= ' + lastFilledStage);
+      console.log('lastIndex= ' + lastIndex);
+
       if (stageName == currentStage) {
         stagesToRender.push (
           <p key={ i }>{stageName}</p>
         )
+      } else if (indexOfStage <= lastIndex) {
+        stagesToRender.push (
+          <p id="inactive" key={ i } onClick={ ()=>setStageFromProgressBar(stageName, indexOfStage) }>{stageName}</p>
+        )
       } else {
-        if (stage.selectedOption != '') {
-          stagesToRender.push (
-            <p id="inactive" key={ i } onClick={ ()=>setStageFromProgressBar(stageName, indexOfStage) }>{stageName}</p>
-          )
-        } else {
-          stagesToRender.push (
-            <p id="inactive" key={ i }>{stageName}</p>
-          )
-        }
+        stagesToRender.push (
+          <p id="inactive" key={ i }>{stageName}</p>
+        )
       }
     })
 

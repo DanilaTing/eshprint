@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SelectButton from '../01_atoms/SelectButton';
-import SelectCustom from '../01_atoms/SelectCustom';
+import SelectFormat from '../01_atoms/SelectFormat';
+import SelectFormatCustom from '../01_atoms/SelectFormatCustom';
 
 export default class FormsForCut extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class FormsForCut extends Component {
       const { optionName } = option
       if (optionName != 'Свой формат') {
         selects.push (
-          <SelectButton
+          <SelectFormat
             text={ optionName }
             selectedOption={ selectedOption }
             actionSelect={ actionSelect }
@@ -27,7 +27,7 @@ export default class FormsForCut extends Component {
         )
       } else {
         selects.push (
-          <SelectCustom
+          <SelectFormatCustom
             text={ optionName }
             selectedOption={ selectedOption }
             actionSelect={ actionSelect }
@@ -44,7 +44,7 @@ export default class FormsForCut extends Component {
 
   render() {
     return (
-      <div className="forms">
+      <div className="FormsForCut">
         { this.renderSelects() }
       </div>
     )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SelectButton from '../01_atoms/SelectButton';
-import SelectCustom from '../01_atoms/SelectCustom';
+import SelectPaper from '../02_molecules/SelectPaper';
+import SelectPaperCustom from '../01_atoms/SelectPaperCustom';
 
 export default class FormsForPaper extends Component {
   constructor(props) {
@@ -14,9 +14,10 @@ export default class FormsForPaper extends Component {
 
     options.map((option, i) => {
       const { optionName } = option
-      if (optionName != 'Свой формат') {
+      if (optionName != 'Своя бумага') {
         selects.push (
-          <SelectButton
+          <SelectPaper
+            option={ option }
             text={ optionName }
             selectedOption={ selectedOption }
             actionSelect={ actionSelect }
@@ -27,7 +28,7 @@ export default class FormsForPaper extends Component {
         )
       } else {
         selects.push (
-          <SelectCustom
+          <SelectPaperCustom
             text={ optionName }
             selectedOption={ selectedOption }
             actionSelect={ actionSelect }
@@ -44,7 +45,7 @@ export default class FormsForPaper extends Component {
 
   render() {
     return (
-      <div className="forms">
+      <div className="FormsForPaper">
         { this.renderSelects() }
       </div>
     )

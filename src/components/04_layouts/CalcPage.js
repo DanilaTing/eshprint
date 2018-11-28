@@ -53,15 +53,49 @@ export default class CalcPage extends Component {
           isNextButtonActive: false,
           options: [
             {
-              optionName: 'Писчая'
+              optionName: 'Своя бумага'
             }, {
-              optionName: 'Munken'
+              optionName: 'Munken 90 GSM',
+              textureImage: 'texture1',
+              colors: [
+                {
+                  name: 'Pink',
+                  hex: '#FF6CFF'
+                }, {
+                  name: 'Yellow',
+                  hex: '#F4FF6C'
+                }
+              ]
             }, {
-              optionName: 'Riso Paper'
+              optionName: 'Munken 120 GSM'
             }, {
-              optionName: 'Other Paper'
+              optionName: 'Munken 160 GSM'
             }, {
-              optionName: 'Свой формат'
+              optionName: 'Munken 180 GSM'
+            }, {
+              optionName: 'Paper Paper 90 GSM'
+            }, {
+              optionName: 'Paper Paper 100 GSM'
+            }, {
+              optionName: 'Paper Paper 120 GSM'
+            }, {
+              optionName: 'Paper Paper 160 GSM'
+            }, {
+              optionName: 'Some Paper 90 GSM'
+            }, {
+              optionName: 'Some Paper 100 GSM'
+            }, {
+              optionName: 'Some Paper 120 GSM'
+            }, {
+              optionName: 'Some Paper 160 GSM'
+            }, {
+              optionName: 'Random Paper 90 GSM'
+            }, {
+              optionName: 'Random Paper 100 GSM'
+            }, {
+              optionName: 'Random Paper 120 GSM'
+            }, {
+              optionName: 'Random Paper 200 GSM'
             }
           ]
         }, {
