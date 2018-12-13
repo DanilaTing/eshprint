@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import FormsForFormat from '../03_organisms/FormsForFormat'
 import FormsForPaper from '../03_organisms/FormsForPaper'
 import FormsForCut from '../03_organisms/FormsForCut'
+import FormsForColors from '../03_organisms/FormsForColors'
+import FormsForAmount from '../03_organisms/FormsForAmount'
+import FormsForFilesHelp from '../03_organisms/FormsForFilesHelp'
+import FormsForTestingColors from '../03_organisms/FormsForTestingColors'
 import TextButton from '../01_atoms/TextButton'
 
 export default class Forms extends Component {
@@ -47,7 +51,7 @@ export default class Forms extends Component {
         </section>
       )
     } else if (currentStage == 'резка') {
-      const { setCutSelected, setCutDeselected, setStageToCut } = actions
+      const { setCutSelected, setCutDeselected, setStageToColors } = actions
       const stage = stages[2]
       const { isNextButtonActive } = stage
       return(
@@ -58,7 +62,75 @@ export default class Forms extends Component {
             stage={ stage }
           />
           <TextButton
-            action={ setStageToCut }
+            action={ setStageToColors }
+            active= { isNextButtonActive }
+          />
+        </section>
+      )
+    } else if (currentStage == 'цвета') {
+      const { setColorsSelected, setColorsDeselected, setStageToAmount } = actions
+      const stage = stages[3]
+      const { isNextButtonActive } = stage
+      return(
+        <section>
+          <FormsForColors
+            actionSelect={ setColorsSelected }
+            actionDeselect={ setColorsDeselected }
+            stage={ stage }
+          />
+          <TextButton
+            action={ setStageToAmount }
+            active= { isNextButtonActive }
+          />
+        </section>
+      )
+    } else if (currentStage == 'тираж') {
+      const { setAmountSelected, setAmountDeselected, setStageToFiles } = actions
+      const stage = stages[4]
+      const { isNextButtonActive } = stage
+      return(
+        <section>
+          <FormsForAmount
+            actionSelect={ setAmountSelected }
+            actionDeselect={ setAmountDeselected }
+            stage={ stage }
+          />
+          <TextButton
+            action={ setStageToFiles }
+            active= { isNextButtonActive }
+          />
+        </section>
+      )
+    } else if (currentStage == 'подготовка файлов') {
+      const { setFilesSelected, setFilesDeselected, setStageToTesting } = actions
+      const stage = stages[5]
+      const { isNextButtonActive } = stage
+      return(
+        <section>
+          <FormsForFilesHelp
+            actionSelect={ setFilesSelected }
+            actionDeselect={ setFilesDeselected }
+            stage={ stage }
+          />
+          <TextButton
+            action={ setStageToTesting }
+            active= { isNextButtonActive }
+          />
+        </section>
+      )
+    } else if (currentStage == 'цветопробы') {
+      const { setTestingColorsSelected, setTestingColorsDeselected, setStageToTesting } = actions
+      const stage = stages[6]
+      const { isNextButtonActive } = stage
+      return(
+        <section>
+          <FormsForTestingColors
+            actionSelect={ setTestingColorsSelected }
+            actionDeselect={ setTestingColorsDeselected }
+            stage={ stage }
+          />
+          <TextButton
+            action={ setStageToTesting }
             active= { isNextButtonActive }
           />
         </section>

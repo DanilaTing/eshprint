@@ -44,8 +44,14 @@ export default class FormsForCut extends Component {
 
   render() {
     return (
-      <div className="FormsForCut">
-        { this.renderSelects() }
+      <div>
+        <div className="FormsForCut">
+          { this.renderSelects() }
+        </div>
+        <div className="noticeWraper">
+          <p className="notice">Вы можете порезать напечатанный тираж самостоятельно, либо доверить резку нам.<br/><br/> Не размещайте значимые объекты близко к краям макета, поскольку они могут пострадать при резке. Если вы располагаете несколько экземпляров одного файла на листе А3, метки реза и вылеты 4 мм. выставлять необходимо каждому.</p>
+          <a className="tutorialLink">Подробнее в руководстве к печати</a>
+        </div>
       </div>
     )
   }

@@ -4,10 +4,24 @@ export default class PaperColorsSelector extends Component {
   constructor(props) {
     super(props)
     this.renderColors = this.renderColors.bind(this)
+    this.openColorsSelector = this.openColorsSelector.bind(this)
+    this.closeColorsSelector = this.closeColorsSelector.bind(this)
 
     this.state = {
-      open: true
+      open: this.props.open
     }
+  }
+
+  openColorsSelector() {
+    this.setState({
+      open: true
+    })
+  }
+
+  closeColorsSelector() {
+    this.setState({
+      open: false
+    })
   }
 
   renderColors() {
@@ -26,8 +40,21 @@ export default class PaperColorsSelector extends Component {
 
     if (this.state.open == true) {
       return (
-        <div className="PaperColorsSelector open">
-          { colorsToRender }
+        <div className="colorSelectWraper" onMouseLeave={ this.closeColorsSelector }>
+          <div className="colorButton">
+            { colorsToRender[1] }
+          </div>
+          <div className="PaperColorsSelector open">
+            { colorsToRender }
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="colorSelectWraper" onMouseOver={ this.openColorsSelector }>
+          <div className="colorButton">
+            { colorsToRender[1] }
+          </div>
         </div>
       )
     }

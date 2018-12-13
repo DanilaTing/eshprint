@@ -25,6 +25,22 @@ export default class CalcPage extends Component {
 
     this.setCutSelected = this.setCutSelected.bind(this)
     this.setCutDeselected = this.setCutDeselected.bind(this)
+    this.setStageToColors = this.setStageToColors.bind(this)
+
+    this.setColorsSelected = this.setColorsSelected.bind(this)
+    this.setColorsDeselected = this.setColorsDeselected.bind(this)
+    this.setStageToAmount = this.setStageToAmount.bind(this)
+
+    this.setAmountSelected = this.setAmountSelected.bind(this)
+    this.setAmountDeselected = this.setAmountDeselected.bind(this)
+    this.setStageToFiles = this.setStageToFiles.bind(this)
+
+    this.setFilesSelected = this.setFilesSelected.bind(this)
+    this.setFilesDeselected = this.setFilesDeselected.bind(this)
+    this.setStageToTesting = this.setStageToTesting.bind(this)
+
+    this.setTestingColorsSelected = this.setTestingColorsSelected.bind(this)
+    this.setTestingColorsDeselected = this.setTestingColorsDeselected.bind(this)
 
     this.state = {
       currentStage: 'пресеты',
@@ -111,17 +127,21 @@ export default class CalcPage extends Component {
           ]
         }, {
           stageName: 'цвета',
-          selectedOption: '',
+          selectedOptions: [],
           isNextButtonActive: false,
           options: [
             {
-              optionName: 'Красный'
+              optionName: 'Красный',
+              color: 'red'
             }, {
-              optionName: 'Синий'
+              optionName: 'Синий',
+              color: 'blue'
             }, {
-              optionName: 'Черный'
+              optionName: 'Черный',
+              color: 'black'
             }, {
-              optionName: 'Желтый'
+              optionName: 'Желтый',
+              color: 'yellow'
             }
           ]
         }, {
@@ -131,6 +151,19 @@ export default class CalcPage extends Component {
           options: [
             {
               optionName: 'Тираж'
+            }
+          ]
+        }, {
+          stageName: 'подготовка файлов',
+          selectedOption: '',
+          isNextButtonActive: false,
+          options: [
+            {
+              optionName: 'Цветоделение и треппинг'
+            }, {
+              optionName: 'Цветокоррекция'
+            }, {
+              optionName: 'Я подготовлю файлы самостоятельно'
             }
           ]
         }, {
@@ -150,9 +183,10 @@ export default class CalcPage extends Component {
         format: '',
         paper: '',
         cut: '',
-        colors: '',
+        colors: [],
         amount: '',
-        testing: ''
+        fileshelp: '',
+        testingColors: ''
       }
     }
   }
@@ -263,6 +297,154 @@ export default class CalcPage extends Component {
     });
   }
 
+  setStageToColors() {
+    this.setState({
+      currentStage: 'цвета',
+      currentStageIndex: 3
+    })
+  }
+
+  setColorsSelected(text) {
+    const stages = this.state.stages;
+    stages[3].selectedOptions.push(text);
+    if (stages[3].selectedOptions != '') {
+      stages[3].isNextButtonActive = true;
+    } else {
+      stages[3].isNextButtonActive = false;
+    }
+    const order = this.state.order;
+    order.colors.push(text);
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setColorsDeselected(text) {
+    const stages = this.state.stages;
+    const selOpts = stages[3].selectedOptions;
+    const index = selOpts.indexOf(text);
+    if (index !== -1) {
+      selOpts.splice(index, 1);
+    }
+    if (stages[3].selectedOptions != '') {
+      stages[3].isNextButtonActive = true;
+    } else {
+      stages[3].isNextButtonActive = false;
+    }
+    const order = this.state.order;
+    const orderColors = order.colors
+    const index2 = orderColors.indexOf(text);
+    if (index2 !== -1) {
+      orderColors.splice(index2, 1);
+    }
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setStageToAmount() {
+    this.setState({
+      currentStage: 'тираж',
+      currentStageIndex: 4
+    })
+  }
+
+  setAmountSelected(text) {
+    const stages = this.state.stages;
+    stages[4].selectedOption = text;
+    stages[4].isNextButtonActive = true;
+    const order = this.state.order;
+    order.amount = text
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setAmountDeselected() {
+    const stages = this.state.stages;
+    stages[4].selectedOption = '';
+    stages[4].isNextButtonActive = false;
+    const order = this.state.order;
+    order.amount = ''
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setStageToFiles() {
+    this.setState({
+      currentStage: 'подготовка файлов',
+      currentStageIndex: 5
+    })
+  }
+
+  setFilesSelected(text) {
+    const stages = this.state.stages;
+    stages[5].selectedOption = text;
+    stages[5].isNextButtonActive = true;
+    const order = this.state.order;
+    order.fileshelp = text
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setFilesDeselected() {
+    const stages = this.state.stages;
+    stages[5].selectedOption = '';
+    stages[5].isNextButtonActive = false;
+    const order = this.state.order;
+    order.fileshelp = ''
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setStageToTesting() {
+    this.setState({
+      currentStage: 'цветопробы',
+      currentStageIndex: 6
+    })
+  }
+
+  setTestingColorsSelected(text) {
+    const stages = this.state.stages;
+    stages[6].selectedOption = text;
+    stages[6].isNextButtonActive = true;
+    const order = this.state.order;
+    order.testingColors = text
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
+  setTestingColorsDeselected() {
+    const stages = this.state.stages;
+    stages[6].selectedOption = '';
+    stages[6].isNextButtonActive = false;
+    const order = this.state.order;
+    order.testingColors = ''
+
+    this.setState({
+      stages,
+      order
+    });
+  }
+
   renderPresetsOrForms() {
     const { currentStage, currentStageIndex, stages } = this.state
 
@@ -277,6 +459,22 @@ export default class CalcPage extends Component {
 
       setCutSelected: this.setCutSelected,
       setCutDeselected: this.setCutDeselected,
+      setStageToColors: this.setStageToColors,
+
+      setColorsSelected: this.setColorsSelected,
+      setColorsDeselected: this.setColorsDeselected,
+      setStageToAmount: this.setStageToAmount,
+
+      setAmountSelected: this.setAmountSelected,
+      setAmountDeselected: this.setAmountDeselected,
+      setStageToFiles: this.setStageToFiles,
+
+      setFilesSelected: this.setFilesSelected,
+      setFilesDeselected: this.setFilesDeselected,
+      setStageToTesting: this.setStageToTesting,
+
+      setTestingColorsSelected: this.setTestingColorsSelected,
+      setTestingColorsDeselected: this.setTestingColorsDeselected,
     }
 
     if (currentStage == 'пресеты') {

@@ -1,0 +1,31 @@
+.SelectFilesHelp {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  max-width: 17.8vw;
+  height: 60px;
+  background-color: black;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  color: white;
+  text-align: center;
+  line-height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B;
+
+    &:hover {
+      color: black;
+      border-color: black;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.SelectColor {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  max-width: 17.8vw;
+  height: 60px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &#red {
+    background-color: red;
+  }
+
+  &#blue {
+    background-color: blue;
+  }
+
+  &#yellow {
+    background-color: yellow;
+  }
+
+  &#black {
+    background-color: black;
+  }
+
+  &.inactive {
+    background-color: white !important;
+    border: 2px solid;
+
+    &#red {
+      border-color: red;
+      color: red;
+    }
+
+    &#blue {
+      border-color: blue;
+      color: blue;
+    }
+
+    &#yellow {
+      border-color: yellow;
+      color: yellow;
+    }
+
+    &#black {
+      border-color: black;
+      color: black;
+    }
+
+    &:hover {
+      color: black;
+      border-color: black;
+    }
+  }
+}

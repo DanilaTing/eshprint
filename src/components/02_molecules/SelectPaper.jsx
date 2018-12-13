@@ -25,7 +25,7 @@ export default class SelectPaper extends Component {
     console.log('colors= ' + colors);
     if (colors != undefined) {
       return (
-        <PaperColorsSelector colors={ colors }/>
+        <PaperColorsSelector colors={ colors } open={ false }/>
       )
     }
   }

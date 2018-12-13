@@ -11,12 +11,21 @@
 @import '03_organisms/FormsForFormat.scss';
 @import '03_organisms/FormsForPaper.scss';
 @import '03_organisms/FormsForCut.scss';
+@import '03_organisms/FormsForColors.scss';
+@import '03_organisms/FormsForAmount.scss';
+@import '03_organisms/FormsForFilesHelp.scss';
+@import '03_organisms/FormsForTestingColors.scss';
 @import '03_organisms/checkout.scss';
 
 @import '02_molecules/SelectPaper.scss';
+@import '02_molecules/FormNotice.scss';
 
 @import '01_atoms/TextButton.scss';
 @import '01_atoms/SelectFormat.scss';
 @import '01_atoms/SelectFormatCustom.scss';
 @import '01_atoms/SelectPaperCustom.scss';
 @import '01_atoms/PaperColorsSelector.scss';
+@import '01_atoms/SelectColor.scss';
+@import '01_atoms/SelectAmount.scss';
+@import '01_atoms/SelectFilesHelp.scss';
+@import '01_atoms/SelectTestingColors.scss';

@@ -44,8 +44,10 @@ export default class FormsForFormat extends Component {
 
   render() {
     return (
-      <div className="FormsForFormat">
-        { this.renderSelects() }
+      <div>
+        <div className="FormsForFormat">
+          { this.renderSelects() }
+        </div>
         <div className="noticeWraper">
           <p className="notice">Максимальный формат нашего ризографа — А3. Хотите напечатать что-то меньше этого формата? Советуем сэкономить и разместить несколько работ на одном листе.</p>
           <a className="tutorialLink">Подробнее в руководстве к печати</a>

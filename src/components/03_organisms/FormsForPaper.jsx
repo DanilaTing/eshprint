@@ -45,8 +45,14 @@ export default class FormsForPaper extends Component {
 
   render() {
     return (
-      <div className="FormsForPaper">
-        { this.renderSelects() }
+      <div>
+        <div className="FormsForPaper">
+          { this.renderSelects() }
+        </div>
+        <div className="noticeWraper">
+          <p className="notice">Вы можете выбрать бумагу из [этого] списка, а также принести свою. Главное, чтобы она отвечала этим параметрам:</p>
+          <a className="tutorialLink">Подробнее в руководстве к печати</a>
+        </div>
       </div>
     )
   }

@@ -198,9 +198,17 @@ body {
       background-color: black;
       position: absolute; }
       .progressBarWraper .progressBar .progressLine#stage0 {
-        width: 12%; }
+        width: 10%; }
       .progressBarWraper .progressBar .progressLine#stage1 {
-        width: 30%; }
+        width: 23%; }
+      .progressBarWraper .progressBar .progressLine#stage2 {
+        width: 37%; }
+      .progressBarWraper .progressBar .progressLine#stage3 {
+        width: 49%; }
+      .progressBarWraper .progressBar .progressLine#stage4 {
+        width: 62%; }
+      .progressBarWraper .progressBar .progressLine#stage5 {
+        width: 85%; }
 
 .FormsForFormat {
   margin-top: 60px;
@@ -208,15 +216,6 @@ body {
   width: 65.7vw;
   display: flex;
   flex-wrap: wrap; }
-  .FormsForFormat .noticeWraper {
-    max-width: 36.8vw;
-    margin-top: 40px; }
-    .FormsForFormat .noticeWraper .notice {
-      margin-bottom: 24px; }
-    .FormsForFormat .noticeWraper .tutorialLink {
-      margin-top: 50px;
-      font-size: 16px;
-      font-weight: 300; }
 
 .FormsForPaper {
   margin-top: 60px;
@@ -224,10 +223,38 @@ body {
   width: 65.7vw;
   display: flex;
   flex-wrap: wrap;
-  max-height: 63.5vh;
+  max-height: 31.6vh;
   overflow: scroll; }
 
 .FormsForCut {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 65.7vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+.FormsForColors {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 65.7vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+.FormsForAmount {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 65.7vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+.FormsForFilesHelp {
+  margin-top: 60px;
+  margin-left: 40px;
+  width: 65.7vw;
+  display: flex;
+  flex-wrap: wrap; }
+
+.FormsForTestingColors {
   margin-top: 60px;
   margin-left: 40px;
   width: 65.7vw;
@@ -280,7 +307,8 @@ body {
   position: relative;
   margin-right: 20px;
   margin-bottom: 20px;
-  color: white;
+  color: black;
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -294,6 +322,17 @@ body {
     .SelectPaper.inactive:hover {
       color: black;
       border-color: black; }
+
+.noticeWraper {
+  max-width: 36.8vw;
+  margin-top: 40px;
+  margin-left: 40px; }
+  .noticeWraper .notice {
+    margin-bottom: 24px; }
+  .noticeWraper .tutorialLink {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 300; }
 
 .TextButton {
   font-size: 20px;
@@ -378,20 +417,158 @@ body {
       color: black;
       border-color: black; }
 
+.colorSelectWraper {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.colorButton {
+  position: absolute;
+  right: 20px; }
+
 .PaperColorsSelector.open {
   width: 100px;
   height: 100%;
   background-color: white;
   border: 2px solid black;
   position: absolute;
-  right: -120px;
+  right: -90px;
   display: flex;
   justify-content: space-around;
   align-items: center; }
-  .PaperColorsSelector.open .colorPicker {
-    width: 24px;
-    height: 24px;
-    border: 2px solid black;
-    border-radius: 100%; }
+  .PaperColorsSelector.open::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url("../../images/triangle.svg");
+    background-size: cover;
+    margin-left: -29px; }
+
+.colorPicker {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #7B7B7B;
+  border-radius: 100%; }
+  .colorPicker:hover {
+    border-color: black; }
+
+.SelectColor {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  max-width: 17.8vw;
+  height: 60px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectColor#red {
+    background-color: red; }
+  .SelectColor#blue {
+    background-color: blue; }
+  .SelectColor#yellow {
+    background-color: yellow; }
+  .SelectColor#black {
+    background-color: black; }
+  .SelectColor.inactive {
+    background-color: white !important;
+    border: 2px solid; }
+    .SelectColor.inactive#red {
+      border-color: red;
+      color: red; }
+    .SelectColor.inactive#blue {
+      border-color: blue;
+      color: blue; }
+    .SelectColor.inactive#yellow {
+      border-color: yellow;
+      color: yellow; }
+    .SelectColor.inactive#black {
+      border-color: black;
+      color: black; }
+    .SelectColor.inactive:hover {
+      color: black;
+      border-color: black; }
+
+.SelectAmount {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  max-width: 17.8vw;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectAmount input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 400;
+    font-family: 'Aeroport'; }
+    .SelectAmount input::-webkit-outer-spin-button, .SelectAmount input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    .SelectAmount input:focus {
+      outline: none; }
+  .SelectAmount.inactive {
+    background-color: white;
+    border: 2px solid #7B7B7B; }
+    .SelectAmount.inactive input {
+      color: #7B7B7B; }
+    .SelectAmount.inactive:hover {
+      border-color: black; }
+      .SelectAmount.inactive:hover input {
+        color: black; }
+
+.SelectFilesHelp {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  max-width: 17.8vw;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectFilesHelp.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B; }
+    .SelectFilesHelp.inactive:hover {
+      color: black;
+      border-color: black; }
+
+.SelectTestingColors {
+  box-sizing: border-box;
+  min-width: 17.8vw;
+  height: 60px;
+  background-color: black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; }
+  .SelectTestingColors.inactive {
+    background-color: white;
+    color: #7B7B7B;
+    border: 2px solid #7B7B7B; }
+    .SelectTestingColors.inactive:hover {
+      color: black;
+      border-color: black; }
 
 /*# sourceMappingURL=style.css.map */
